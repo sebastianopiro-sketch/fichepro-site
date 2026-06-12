@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Engineering: Stars, Puzzles, Plow Horses e Dogs | Fiche Technique Pro</title>
+<meta name="description" content="Il metodo Kasavana & Smith per classificare ogni piatto in Stars, Puzzles, Plow Horses e Dogs. Matrice completa, esempio numerico e strategie per ogni quadrante.">
+<meta property="og:title" content="Menu Engineering: Stars, Puzzles, Plow Horses e Dogs">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero{background:var(--paper2,#f8f4ef);padding:80px 0 48px}
+  .blog-meta{font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#9ca3af);margin-bottom:16px}
+  .blog-hero h1{max-width:720px;margin:0 0 24px}
+  .blog-hero .lead{max-width:600px;color:var(--ink-2,#6b7280)}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .article h2{margin:48px 0 16px;font-size:1.5rem}
+  .article h3{margin:32px 0 12px;font-size:1.15rem}
+  .article p{line-height:1.8;margin-bottom:18px;color:var(--ink-1,#374151)}
+  .article ul,.article ol{padding-left:24px;line-height:1.8;color:var(--ink-1,#374151);margin-bottom:18px}
+  .article li{margin-bottom:8px}
+  .callout{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+  .callout.green{background:#f0fdf4;border-left-color:#16a34a}
+  .callout.amber{background:#fffbeb;border-left-color:#d97706}
+  .callout.red{background:#fef2f2;border-left-color:#dc2626}
+  .callout p{margin:0;color:#1e40af;font-size:0.95rem}
+  .callout.green p{color:#065f46}
+  .callout.amber p{color:#92400e}
+  .callout.red p{color:#991b1b}
+  .formula-box{background:#1a1a2e;color:#e2e8f0;border-radius:12px;padding:24px 28px;margin:28px 0;font-family:'JetBrains Mono',monospace;font-size:1rem;line-height:1.7}
+  .formula-box .highlight{color:#4ade80;font-weight:700}
+  .matrix-wrap{display:flex;gap:0;margin:32px 0}
+  .axis-label{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3,#9ca3af);padding:8px 4px;background:var(--paper2,#f8f4ef);border:2px solid var(--blue,#1a1a2e);border-right:none;border-radius:12px 0 0 12px;text-align:center}
+  .matrix-right{flex:1}
+  .matrix-col-labels{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--blue,#1a1a2e);border-bottom:none;border-radius:12px 12px 0 0;overflow:hidden}
+  .matrix-col-label{padding:8px 16px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3,#9ca3af);background:var(--paper2,#f8f4ef);text-align:center}
+  .matrix-col-label:first-child{border-right:1px solid #e5e7eb}
+  .matrix2{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--blue,#1a1a2e);border-top:none;border-radius:0 0 12px 12px;overflow:hidden}
+  .matrix-cell{padding:24px 20px}
+  .matrix-cell h4{font-size:1.1rem;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+  .matrix-cell p{font-size:0.88rem;margin:0;line-height:1.6;color:var(--ink-2,#6b7280)}
+  .cell-star{background:#fef9c3;border-right:1px solid #fde68a;border-bottom:1px solid #fde68a}
+  .cell-puzzle{background:#eff6ff;border-bottom:1px solid #bfdbfe}
+  .cell-plow{background:#f0fdf4;border-right:1px solid #bbf7d0}
+  .cell-dog{background:#fef2f2}
+  .example-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  .example-table th{background:var(--blue,#1a1a2e);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .example-table td{padding:10px 14px;border-bottom:1px solid var(--border,#e5e7eb);color:var(--ink-1,#374151)}
+  .example-table tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:4px}
+  .tag-star{background:#fef9c3;color:#854d0e}
+  .tag-puzzle{background:#eff6ff;color:#1e40af}
+  .tag-plow{background:#f0fdf4;color:#065f46}
+  .tag-dog{background:#fef2f2;color:#991b1b}
+  .cta-box{background:var(--blue,#1a1a2e);border-radius:16px;padding:40px 36px;margin:48px 0;text-align:center;color:#fff}
+  .cta-box h3{color:#fff;margin:0 0 12px;font-size:1.4rem}
+  .cta-box p{color:#94a3b8;margin:0 0 24px}
+  .breadcrumb{font-size:0.82rem;color:var(--ink-3,#9ca3af);margin-bottom:20px}
+  .breadcrumb a{color:var(--ink-3,#9ca3af);text-decoration:none}
+  .lang-versions{display:flex;gap:8px;margin-bottom:24px}
+  .lang-versions a{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--border,#e5e7eb);color:var(--ink-2,#6b7280);text-decoration:none}
+  .lang-versions a.active{background:var(--blue,#1a1a2e);color:#fff;border-color:var(--blue,#1a1a2e)}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Funzionalità</a>
+      <a href="prezzi.html" data-t="nav.pricing">Prezzi</a>
+      <a href="download.html" data-t="nav.download">Download</a>
+      <a href="blog.html">Blog</a>
+      <a href="contatti.html" data-t="nav.contact">Contatti</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="it" class="active">IT</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm">Prova gratis</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> › <a href="blog.html">Blog</a> › Menu Engineering</p>
+    <div class="lang-versions">
+      <a href="blog-menu-engineering-it.html" class="active">🇮🇹 IT</a>
+      <a href="blog-menu-engineering-fr.html">🇫🇷 FR</a>
+      <a href="blog-menu-engineering-en.html">🇬🇧 EN</a>
+    </div>
+    <p class="blog-meta">📊 Strategia Menu · 10 min di lettura</p>
+    <h1 class="display">Menu Engineering: Stars, Puzzles, Plow Horses e Dogs</h1>
+    <p class="lead">Il metodo Kasavana &amp; Smith per classificare ogni piatto della carta in base a redditività e popolarità — e prendere le decisioni strategiche giuste.</p>
+  </div>
+</section>
+
+<div class="container">
+  <article class="article">
+
+    <h2>Cos'è il Menu Engineering?</h2>
+    <p>Il <strong>Menu Engineering</strong> è un metodo di analisi della carta sviluppato nel 1982 da Michael Kasavana e Donald Smith. Classifica ogni piatto secondo due dimensioni:</p>
+    <ul>
+      <li><strong>La redditività</strong>: il margine lordo generato per porzione (differenza tra prezzo di vendita e costo materia)</li>
+      <li><strong>La popolarità</strong>: il numero di porzioni vendute in un determinato periodo</li>
+    </ul>
+    <p>L'incrocio di questi due assi crea una matrice 2×2 con quattro categorie diventate ormai classiche nella ristorazione mondiale.</p>
+
+    <h2>La matrice a 4 quadranti</h2>
+
+    <div class="matrix-wrap">
+      <div class="axis-label">← Bassa popolarità · Alta popolarità →</div>
+      <div class="matrix-right">
+        <div class="matrix-col-labels">
+          <div class="matrix-col-label">Bassa redditività</div>
+          <div class="matrix-col-label">Alta redditività</div>
+        </div>
+        <div class="matrix2">
+          <div class="matrix-cell cell-plow">
+            <h4>🐴 Plow Horses</h4>
+            <p>Popolari ma poco redditizi. Portano clienti ma pesano sui margini.</p>
+          </div>
+          <div class="matrix-cell cell-star">
+            <h4>⭐ Stars</h4>
+            <p>Il graal: popolari E redditizi. Da promuovere assolutamente.</p>
+          </div>
+          <div class="matrix-cell cell-dog">
+            <h4>🐕 Dogs</h4>
+            <p>Né popolari né redditizi. I primi candidati all'eliminazione.</p>
+          </div>
+          <div class="matrix-cell cell-puzzle">
+            <h4>🔧 Puzzles</h4>
+            <p>Redditizi ma poco venduti. Il loro potenziale è sottosfruttato.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Come calcolare redditività e popolarità</h2>
+
+    <h3>La redditività: margine lordo per porzione</h3>
+    <p>La redditività si misura non come ratio (%) ma come valore assoluto — il <strong>margine lordo per porzione</strong>:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Margine lordo</span> = Prezzo di vendita − Costo materia</div>
+      <div style="margin-top:8px;color:#94a3b8">Es.: € 22,00 − € 6,35 = € 15,65 di margine per porzione</div>
+    </div>
+
+    <p>Un piatto è considerato <strong>alta redditività</strong> se il suo margine lordo è superiore al margine lordo medio di tutti i piatti della carta.</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Margine medio</span> = Σ (margine × porzioni vendute) ÷ Totale porzioni vendute</div>
+    </div>
+
+    <h3>La popolarità: soglia minima di vendite</h3>
+    <p>Un piatto è <strong>popolare</strong> se le sue vendite rappresentano almeno il <strong>70% della quota equa</strong>:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Quota equa</span> = 100% ÷ Numero di piatti in carta</div>
+      <div style="margin-top:8px;color:#94a3b8">Es.: 15 piatti → quota = 6,67% → soglia = 6,67 × 0,70 = 4,67%</div>
+    </div>
+
+    <h2>Esempio concreto: analisi di un menu trattoria</h2>
+
+    <table class="example-table">
+      <thead>
+        <tr><th>Piatto</th><th>Vendite/mese</th><th>Costo materia</th><th>Prezzo</th><th>Margine</th><th>Categoria</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tagliata di manzo</td><td>148</td><td>€ 9,20</td><td>€ 26,00</td><td>€ 16,80</td><td><span class="tag tag-star">⭐ Star</span></td></tr>
+        <tr><td>Cozze alla marinara</td><td>122</td><td>€ 4,80</td><td>€ 18,00</td><td>€ 13,20</td><td><span class="tag tag-star">⭐ Star</span></td></tr>
+        <tr><td>Bavette allo scalogno</td><td>97</td><td>€ 6,35</td><td>€ 22,00</td><td>€ 15,65</td><td><span class="tag tag-star">⭐ Star</span></td></tr>
+        <tr><td>Hamburger artigianale</td><td>201</td><td>€ 5,10</td><td>€ 14,00</td><td>€ 8,90</td><td><span class="tag tag-plow">🐴 Plow Horse</span></td></tr>
+        <tr><td>Croque-monsieur</td><td>178</td><td>€ 2,60</td><td>€ 10,00</td><td>€ 7,40</td><td><span class="tag tag-plow">🐴 Plow Horse</span></td></tr>
+        <tr><td>Foie gras artigianale</td><td>34</td><td>€ 12,00</td><td>€ 32,00</td><td>€ 20,00</td><td><span class="tag tag-puzzle">🔧 Puzzle</span></td></tr>
+        <tr><td>Tartare di tonno</td><td>28</td><td>€ 8,50</td><td>€ 24,00</td><td>€ 15,50</td><td><span class="tag tag-puzzle">🔧 Puzzle</span></td></tr>
+        <tr><td>Insalata nizzarda</td><td>19</td><td>€ 4,20</td><td>€ 14,00</td><td>€ 9,80</td><td><span class="tag tag-dog">🐕 Dog</span></td></tr>
+        <tr><td>Omelette prosciutto</td><td>12</td><td>€ 2,10</td><td>€ 9,00</td><td>€ 6,90</td><td><span class="tag tag-dog">🐕 Dog</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Le 4 strategie da applicare per categoria</h2>
+
+    <h3>⭐ Stars — Conserva e promuovi</h3>
+    <p>Le Stars sono il motore della redditività. Priorità:</p>
+    <ul>
+      <li>Posizionale visivamente in cima alla carta o in un riquadro dedicato</li>
+      <li>Forma il personale a consigliarle spontaneamente</li>
+      <li>Mantieni una qualità costante: è la tua reputazione</li>
+      <li>Non abbassare i prezzi — i clienti già le scelgono</li>
+    </ul>
+
+    <div class="callout green">
+      <p>✅ La tagliata di manzo nell'esempio genera € 16,80 × 148 porzioni = <strong>€ 2.486 di margine lordo mensile</strong>. È il tuo asset numero uno.</p>
+    </div>
+
+    <h3>🐴 Plow Horses — Riduci i costi o aumenta i prezzi</h3>
+    <p>I Plow Horses sono popolari: eliminarli rischia di deludere i clienti abituali. Ma il loro margine basso è un freno. Strategie:</p>
+    <ul>
+      <li><strong>Riduci il costo materia</strong>: rinegozia con il fornitore, modifica leggermente la ricetta</li>
+      <li><strong>Aumenta discretamente il prezzo</strong>: +1-2 € su un piatto a € 14 può passare inosservato ma migliora significativamente il margine</li>
+      <li><strong>Riduci la visibilità</strong>: mettili in fondo alla carta e dai priorità alle Stars nelle raccomandazioni</li>
+    </ul>
+
+    <h3>🔧 Puzzles — Aumenta la visibilità e lavora la presentazione</h3>
+    <p>Il foie gras artigianale è redditizio ma poco venduto. Azioni:</p>
+    <ul>
+      <li>Riscrivi la descrizione sulla carta in modo più evocativo</li>
+      <li>Aggiungi una foto sul tablet o sulla carta digitale</li>
+      <li>Proponilo come suggerimento del cameriere</li>
+      <li>Creaci intorno un menu degustazione</li>
+      <li>Se le vendite non decollano, abbassa leggermente il prezzo</li>
+    </ul>
+
+    <h3>🐕 Dogs — Elimina o ripensa completamente</h3>
+    <ul>
+      <li>Verifica se il piatto ha un ruolo strategico (attrattiva di un segmento clientela)</li>
+      <li>Se non ha utilità strategica, eliminalo: semplifichi la cucina, riduci gli sprechi, liberi spazio in carta</li>
+      <li>Se lo tieni, ripensalo completamente: nuovo nome, nuovo prezzo, nuova ricetta</li>
+    </ul>
+
+    <div class="callout red">
+      <p>⚠️ Un menu troppo lungo nuoce alla redditività: più referenze = più scorte, più sprechi, più complessità in cucina. 15-20 piatti ben scelti battono spesso una carta di 40 piatti mediocri.</p>
+    </div>
+
+    <h2>Con quale frequenza fare l'analisi?</h2>
+    <ul>
+      <li><strong>Mensile</strong>: analisi completa con i dati di vendita del mese</li>
+      <li><strong>Trimestrale</strong>: revisione dei prezzi e delle ricette in base alle variazioni dei fornitori</li>
+      <li><strong>Annuale</strong>: eventuale revisione della carta (stagionalità, nuovi piatti, eliminazioni)</li>
+    </ul>
+
+    <h2>I limiti del Menu Engineering</h2>
+    <ul>
+      <li>Un Dog può essere strategico se attira un segmento specifico (vegetariani, bambini, allergici)</li>
+      <li>Il margine lordo non tiene conto del tempo di preparazione</li>
+      <li>La popolarità è influenzata dalla posizione in carta, non solo dal gusto</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Menu Engineering automatizzato in Fiche Technique Pro</h3>
+      <p>Importa le vendite, regola le soglie di redditività e popolarità, e ottieni istantaneamente la matrice Stars/Puzzles/Plow Horses/Dogs per tutta la carta.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Prova gratis 30 giorni</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Vedi prezzi Pro Plus</a>
+      </div>
+      <p style="color:#64748b;font-size:0.82rem;margin:16px 0 0">Funzione Menu Engineering disponibile nel piano Pro Plus.</p>
+    </div>
+
+    <h2>Riepilogo</h2>
+    <ol>
+      <li>Calcola il margine lordo di ogni piatto (prezzo − costo materia)</li>
+      <li>Identifica il margine medio ponderato per le vendite → soglia di redditività</li>
+      <li>Calcola la quota equa × 70% → soglia di popolarità</li>
+      <li>Classifica ogni piatto: Star / Puzzle / Plow Horse / Dog</li>
+      <li>Applica le strategie adeguate a ogni quadrante</li>
+      <li>Ripeti ogni mese e misura l'impatto sui margini</li>
+    </ol>
+
+  </article>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Pronto a ottimizzare il tuo menu?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Fiche Technique Pro calcola la matrice Menu Engineering automaticamente. Prova gratis 30 giorni.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Inizia la prova gratuita</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Software professionale per il calcolo del costo di produzione in ristorazione.</p>
+      </div>
+      <div>
+        <h4>Prodotto</h4>
+        <ul>
+          <li><a href="index.html#features">Funzionalità</a></li>
+          <li><a href="prezzi.html">Prezzi</a></li>
+          <li><a href="download.html">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. Tutti i diritti riservati.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

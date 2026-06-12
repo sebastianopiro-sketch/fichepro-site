@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Come calcolare il costo di produzione di un piatto | Fiche Technique Pro</title>
+<meta name="description" content="Guida completa al costo di produzione in ristorazione: formula, coefficiente moltiplicatore, esempio pratico con bavette e le 5 errori classici da evitare.">
+<meta property="og:title" content="Come calcolare il costo di produzione di un piatto">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero{background:var(--paper2,#f8f4ef);padding:80px 0 48px}
+  .blog-meta{font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#9ca3af);margin-bottom:16px}
+  .blog-hero h1{max-width:720px;margin:0 0 24px}
+  .blog-hero .lead{max-width:600px;color:var(--ink-2,#6b7280)}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .article h2{margin:48px 0 16px;font-size:1.5rem}
+  .article h3{margin:32px 0 12px;font-size:1.15rem}
+  .article p{line-height:1.8;margin-bottom:18px;color:var(--ink-1,#374151)}
+  .article ul,.article ol{padding-left:24px;line-height:1.8;color:var(--ink-1,#374151);margin-bottom:18px}
+  .article li{margin-bottom:8px}
+  .callout{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+  .callout.green{background:#f0fdf4;border-left-color:#16a34a}
+  .callout.amber{background:#fffbeb;border-left-color:#d97706}
+  .callout p{margin:0;color:#1e40af;font-size:0.95rem}
+  .callout.green p{color:#065f46}
+  .callout.amber p{color:#92400e}
+  .formula-box{background:#1a1a2e;color:#e2e8f0;border-radius:12px;padding:24px 28px;margin:28px 0;font-family:'JetBrains Mono',monospace;font-size:1rem;line-height:1.7}
+  .formula-box .highlight{color:#4ade80;font-weight:700}
+  .example-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  .example-table th{background:var(--blue,#1a1a2e);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .example-table td{padding:10px 14px;border-bottom:1px solid var(--border,#e5e7eb);color:var(--ink-1,#374151)}
+  .example-table tr:last-child td{border-bottom:none}
+  .example-table .total{font-weight:700;background:var(--paper2,#f8f4ef)}
+  .cta-box{background:var(--blue,#1a1a2e);border-radius:16px;padding:40px 36px;margin:48px 0;text-align:center;color:#fff}
+  .cta-box h3{color:#fff;margin:0 0 12px;font-size:1.4rem}
+  .cta-box p{color:#94a3b8;margin:0 0 24px}
+  .breadcrumb{font-size:0.82rem;color:var(--ink-3,#9ca3af);margin-bottom:20px}
+  .breadcrumb a{color:var(--ink-3,#9ca3af);text-decoration:none}
+  .lang-versions{display:flex;gap:8px;margin-bottom:24px}
+  .lang-versions a{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--border,#e5e7eb);color:var(--ink-2,#6b7280);text-decoration:none}
+  .lang-versions a.active{background:var(--blue,#1a1a2e);color:#fff;border-color:var(--blue,#1a1a2e)}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Funzionalità</a>
+      <a href="prezzi.html" data-t="nav.pricing">Prezzi</a>
+      <a href="download.html" data-t="nav.download">Download</a>
+      <a href="blog.html">Blog</a>
+      <a href="contatti.html" data-t="nav.contact">Contatti</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="it" class="active">IT</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm">Prova gratis</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> › <a href="blog.html">Blog</a> › Costo di produzione</p>
+    <div class="lang-versions">
+      <a href="blog-cout-revient-it.html" class="active">🇮🇹 IT</a>
+      <a href="blog-cout-revient-fr.html">🇫🇷 FR</a>
+      <a href="blog-cout-revient-en.html">🇬🇧 EN</a>
+    </div>
+    <p class="blog-meta">📊 Gestione Ristorante · 8 min di lettura</p>
+    <h1 class="display">Come calcolare il costo di produzione di un piatto</h1>
+    <p class="lead">Formula, coefficiente moltiplicatore e strategie per padroneggiare i costi materia e ottimizzare la redditività di ogni piatto.</p>
+  </div>
+</section>
+
+<div class="container">
+  <article class="article">
+
+    <h2>Cos'è il costo di produzione?</h2>
+    <p>Il <strong>costo di produzione</strong> (o costo materia) di un piatto rappresenta il costo totale degli ingredienti necessari per realizzarlo. In ristorazione professionale, viene espresso in euro per porzione e in percentuale del prezzo di vendita — quello che in francese si chiama <em>ratio matières</em> e in inglese <em>food cost</em>.</p>
+
+    <div class="callout amber">
+      <p>⚡ Un ristorante ben gestito mantiene il costo materia tra il <strong>25% e il 35%</strong> del prezzo di vendita. Oltre il 40%, i margini diventano critici e compromettono la sostenibilità dell'attività.</p>
+    </div>
+
+    <h2>Le formule di base</h2>
+    <p>Due indicatori complementari sono indispensabili:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Ratio materia (%) </span>= (Costo ingredienti ÷ Prezzo di vendita) × 100</div>
+      <div style="margin-top:16px"><span class="highlight">Coefficiente moltiplicatore </span>= Prezzo di vendita ÷ Costo ingredienti</div>
+    </div>
+
+    <p>Il <strong>coefficiente moltiplicatore</strong> è molto usato nella ristorazione professionale. Un coefficiente di 3,5 corrisponde a un ratio del 28,6%. In pratica, molti chef definiscono il prezzo di vendita moltiplicando direttamente il costo materia per il coefficiente obiettivo.</p>
+
+    <h2>Esempio pratico: Tagliata di manzo allo scalogno</h2>
+    <p>Calcoliamo il costo di produzione di una tagliata — piatto da trattoria per eccellenza — per una porzione.</p>
+
+    <table class="example-table">
+      <thead>
+        <tr><th>Ingrediente</th><th>Quantità</th><th>Prezzo/kg</th><th>Costo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tagliata di manzo (cruda)</td><td>0,220 kg</td><td>€ 22,00</td><td>€ 4,84</td></tr>
+        <tr><td>Scalogni</td><td>0,080 kg</td><td>€ 3,50</td><td>€ 0,28</td></tr>
+        <tr><td>Burro</td><td>0,025 kg</td><td>€ 9,50</td><td>€ 0,24</td></tr>
+        <tr><td>Vino rosso (per salsa)</td><td>0,080 L</td><td>€ 4,00</td><td>€ 0,32</td></tr>
+        <tr><td>Fondo di vitello</td><td>0,050 L</td><td>€ 6,00</td><td>€ 0,30</td></tr>
+        <tr><td>Patatine fritte (porzione)</td><td>0,180 kg</td><td>€ 1,20</td><td>€ 0,22</td></tr>
+        <tr><td>Olio, sale, pepe, erbe</td><td>q.b.</td><td>—</td><td>€ 0,15</td></tr>
+        <tr class="total"><td colspan="3"><strong>Costo materia totale</strong></td><td><strong>€ 6,35</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>Per un prezzo di vendita di <strong>€ 22,00</strong>:</p>
+
+    <div class="formula-box">
+      <div>Ratio materia = (6,35 ÷ 22,00) × 100 = <span class="highlight">28,9%</span></div>
+      <div style="margin-top:8px">Coefficiente = 22,00 ÷ 6,35 = <span class="highlight">3,46×</span></div>
+    </div>
+
+    <div class="callout green">
+      <p>✅ Un ratio del 28,9% è eccellente per una tagliata. Rimane margine sufficiente per coprire i costi fissi (affitto, personale, energia) e generare utile.</p>
+    </div>
+
+    <h2>Come fissare il prezzo di vendita dal costo materia</h2>
+    <p>L'approccio più semplice è definire il <strong>coefficiente obiettivo</strong> in base alla struttura dei costi, poi applicarlo:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Prezzo di vendita</span> = Costo materia × Coefficiente obiettivo</div>
+      <div style="margin-top:8px;color:#94a3b8">Es.: 6,35 × 3,5 = € 22,23 → arrotondato a € 22,00</div>
+    </div>
+
+    <p>Oppure ragionando per ratio obiettivo:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Prezzo minimo</span> = Costo materia ÷ Ratio obiettivo</div>
+      <div style="margin-top:8px;color:#94a3b8">Es.: 6,35 ÷ 0,30 = € 21,17 (per un ratio del 30%)</div>
+    </div>
+
+    <h2>La resa: l'errore da non commettere</h2>
+    <p>Uno degli errori più frequenti è calcolare il costo materia senza tenere conto della <strong>resa</strong> degli ingredienti. Ogni prodotto crudo perde una parte del peso durante la preparazione:</p>
+    <ul>
+      <li>Carne: perdita del 20-30% in cottura a seconda del taglio</li>
+      <li>Pesce intero: 50-60% di perdita nella spinatura/filettatura</li>
+      <li>Verdure: 15-30% a seconda della pulitura</li>
+      <li>Crostacei interi: 60-70% di scarto</li>
+    </ul>
+
+    <div class="callout">
+      <p>📐 <strong>Costo netto reale:</strong> se acquisti un salmone intero a € 12/kg con una resa del 40% in filetti utilizzabili, il costo reale del filetto è € 12 ÷ 0,40 = <strong>€ 30/kg</strong>.</p>
+    </div>
+
+    <h2>I 5 errori classici nel calcolo del costo di produzione</h2>
+
+    <h3>1. Non aggiornare i prezzi di acquisto</h3>
+    <p>Le tariffe dei fornitori cambiano — a volte in modo significativo per i prodotti stagionali. Un costo calcolato a gennaio con i prezzi di ottobre può essere completamente sbagliato. Aggiorna le schede tecniche ad ogni variazione tariffaria rilevante.</p>
+
+    <h3>2. Dimenticare condimenti e guarnizioni</h3>
+    <p>Sale, pepe, olio d'oliva, erbe fresche, limone, salse di base — sembrano trascurabili singolarmente ma rappresentano il 3-5% del costo materia globale. Crea una voce "condimenti" forfettaria in ogni scheda.</p>
+
+    <h3>3. Confondere grammi e porzioni</h3>
+    <p>Verifica sempre che le quantità corrispondano a <em>una porzione</em>, non alla ricetta intera. Un risotto per 4 persone con costo materia di € 15,44 costa € 3,86 a porzione — non € 15,44.</p>
+
+    <h3>4. Ignorare la differenza tra teorico e reale</h3>
+    <p>Furti, errori di porzione, sprechi in cucina — la differenza tra food cost teorico e reale rappresenta spesso il 2-4% del fatturato. Confronta regolarmente i due valori per identificare inefficienze.</p>
+
+    <h3>5. Non integrare le schede tecniche nella formazione</h3>
+    <p>La scheda tecnica è utile solo se la brigata la rispetta. Porzioni non controllate o ricette improvvisate in servizio possono far esplodere il food cost reale rispetto al teorico.</p>
+
+    <h2>Costo teorico vs costo reale</h2>
+    <p>Il confronto tra questi due indicatori è fondamentale:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Food cost reale (%)</span></div>
+      <div style="margin-top:8px;color:#94a3b8">= ((Scorte iniziali + Acquisti − Scorte finali) ÷ Fatturato) × 100</div>
+    </div>
+
+    <p>Uno scarto superiore al <strong>3-5%</strong> tra teorico e reale segnala un problema: sprechi, porzioni non rispettate, furti o errori di contabilità materia.</p>
+
+    <h2>Lo strumento indispensabile: la scheda tecnica</h2>
+    <p>La <strong>scheda tecnica</strong> è il documento di riferimento di ogni piatto. Contiene:</p>
+    <ul>
+      <li>Tutti gli ingredienti con le grammature precise</li>
+      <li>La resa di ogni prodotto</li>
+      <li>Il costo unitario e il costo totale della porzione</li>
+      <li>Il prezzo di vendita obiettivo e il coefficiente corrispondente</li>
+      <li>Il metodo di preparazione standardizzato</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Gestisci le schede tecniche senza Excel</h3>
+      <p>Fiche Technique Pro calcola automaticamente il costo di produzione e il coefficiente di ogni piatto. Aggiorna il prezzo di un ingrediente e tutte le schede vengono ricalcolate istantaneamente.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Prova gratis 30 giorni</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Vedi i prezzi</a>
+      </div>
+      <p style="color:#64748b;font-size:0.82rem;margin:16px 0 0">Senza carta di credito. Senza abbonamento mensile.</p>
+    </div>
+
+    <h2>Riepilogo: i passi fondamentali</h2>
+    <ol>
+      <li>Elenca tutti gli ingredienti con le grammature esatte per porzione</li>
+      <li>Raccogli i prezzi di acquisto aggiornati dai fornitori</li>
+      <li>Calcola le rese (perdita cottura / pulitura) per ogni prodotto</li>
+      <li>Applica: Costo materia = Σ (quantità netta × prezzo netto)</li>
+      <li>Dividi per il prezzo di vendita → ratio materia</li>
+      <li>Confronta ratio teorico e reale ogni mese</li>
+    </ol>
+
+    <div class="callout green">
+      <p>✅ <strong>Regola d'oro:</strong> il tuo coefficiente obiettivo deve almeno coprire il costo del personale (≈ 30-35%) + costi fissi (≈ 15-20%) + utile desiderato. Per la maggior parte dei ristoranti, un coefficiente tra 3× e 4× (ratio 25-33%) è l'obiettivo.</p>
+    </div>
+
+  </article>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Pronto a controllare i costi del tuo ristorante?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Prova Fiche Technique Pro gratis per 30 giorni. Nessuna carta di credito.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Inizia la prova gratuita</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Software professionale per il calcolo del costo di produzione in ristorazione.</p>
+      </div>
+      <div>
+        <h4>Prodotto</h4>
+        <ul>
+          <li><a href="index.html#features">Funzionalità</a></li>
+          <li><a href="prezzi.html">Prezzi</a></li>
+          <li><a href="download.html">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. Tutti i diritti riservati.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

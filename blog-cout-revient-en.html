@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Calculate the Cost Price of a Dish | Fiche Technique Pro</title>
+<meta name="description" content="Complete guide to calculating cost price (coût de revient) in restaurants: formula, markup coefficient, practical example and the 5 classic mistakes to avoid.">
+<meta property="og:title" content="How to Calculate the Cost Price of a Dish">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero{background:var(--paper2,#f8f4ef);padding:80px 0 48px}
+  .blog-meta{font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#9ca3af);margin-bottom:16px}
+  .blog-hero h1{max-width:720px;margin:0 0 24px}
+  .blog-hero .lead{max-width:600px;color:var(--ink-2,#6b7280)}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .article h2{margin:48px 0 16px;font-size:1.5rem}
+  .article h3{margin:32px 0 12px;font-size:1.15rem}
+  .article p{line-height:1.8;margin-bottom:18px;color:var(--ink-1,#374151)}
+  .article ul,.article ol{padding-left:24px;line-height:1.8;color:var(--ink-1,#374151);margin-bottom:18px}
+  .article li{margin-bottom:8px}
+  .callout{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+  .callout.green{background:#f0fdf4;border-left-color:#16a34a}
+  .callout.amber{background:#fffbeb;border-left-color:#d97706}
+  .callout p{margin:0;color:#1e40af;font-size:0.95rem}
+  .callout.green p{color:#065f46}
+  .callout.amber p{color:#92400e}
+  .formula-box{background:#1a1a2e;color:#e2e8f0;border-radius:12px;padding:24px 28px;margin:28px 0;font-family:'JetBrains Mono',monospace;font-size:1rem;line-height:1.7}
+  .formula-box .highlight{color:#4ade80;font-weight:700}
+  .example-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  .example-table th{background:var(--blue,#1a1a2e);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .example-table td{padding:10px 14px;border-bottom:1px solid var(--border,#e5e7eb);color:var(--ink-1,#374151)}
+  .example-table tr:last-child td{border-bottom:none}
+  .example-table .total{font-weight:700;background:var(--paper2,#f8f4ef)}
+  .cta-box{background:var(--blue,#1a1a2e);border-radius:16px;padding:40px 36px;margin:48px 0;text-align:center;color:#fff}
+  .cta-box h3{color:#fff;margin:0 0 12px;font-size:1.4rem}
+  .cta-box p{color:#94a3b8;margin:0 0 24px}
+  .breadcrumb{font-size:0.82rem;color:var(--ink-3,#9ca3af);margin-bottom:20px}
+  .breadcrumb a{color:var(--ink-3,#9ca3af);text-decoration:none}
+  .lang-versions{display:flex;gap:8px;margin-bottom:24px}
+  .lang-versions a{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--border,#e5e7eb);color:var(--ink-2,#6b7280);text-decoration:none}
+  .lang-versions a.active{background:var(--blue,#1a1a2e);color:#fff;border-color:var(--blue,#1a1a2e)}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Features</a>
+      <a href="prezzi.html" data-t="nav.pricing">Pricing</a>
+      <a href="download.html" data-t="nav.download">Download</a>
+      <a href="blog.html">Blog</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm">Free trial</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> › <a href="blog.html">Blog</a> › Cost Price</p>
+    <div class="lang-versions">
+      <a href="blog-cout-revient-it.html">🇮🇹 IT</a>
+      <a href="blog-cout-revient-fr.html">🇫🇷 FR</a>
+      <a href="blog-cout-revient-en.html" class="active">🇬🇧 EN</a>
+    </div>
+    <p class="blog-meta">📊 Restaurant Management · 8 min read</p>
+    <h1 class="display">How to Calculate the Cost Price of a Dish</h1>
+    <p class="lead">Formula, markup coefficient and strategies to master your ingredient costs and optimise the profitability of every dish on your menu.</p>
+  </div>
+</section>
+
+<div class="container">
+  <article class="article">
+
+    <h2>What is cost price?</h2>
+    <p>The <strong>cost price</strong> (known in French as <em>coût de revient</em>) of a dish is the total cost of all ingredients needed to make it. In professional kitchens, it is expressed both in euros per portion and as a percentage of the selling price — the latter is called the <strong>food cost ratio</strong>.</p>
+
+    <div class="callout amber">
+      <p>⚡ A well-managed restaurant keeps its food cost ratio between <strong>25% and 35%</strong> of the selling price. Above 40%, margins become critical and threaten the viability of the business.</p>
+    </div>
+
+    <h2>The key formulas</h2>
+    <p>Two complementary indicators are essential:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Food cost ratio (%) </span>= (Ingredient cost ÷ Selling price excl. VAT) × 100</div>
+      <div style="margin-top:16px"><span class="highlight">Markup coefficient </span>= Selling price excl. VAT ÷ Ingredient cost</div>
+    </div>
+
+    <p>The <strong>markup coefficient</strong> is widely used in professional French kitchens. A coefficient of 3.5 equals a food cost ratio of 28.6%. In practice, chefs often set their selling price by multiplying the ingredient cost directly by the target coefficient.</p>
+
+    <h2>Worked example: Sirloin steak with shallots</h2>
+    <p>Let's calculate the cost price of a sirloin steak — a classic brasserie dish — for one portion.</p>
+
+    <table class="example-table">
+      <thead>
+        <tr><th>Ingredient</th><th>Quantity</th><th>Price/kg</th><th>Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sirloin steak (raw)</td><td>0.220 kg</td><td>€ 22.00</td><td>€ 4.84</td></tr>
+        <tr><td>Shallots</td><td>0.080 kg</td><td>€ 3.50</td><td>€ 0.28</td></tr>
+        <tr><td>Butter</td><td>0.025 kg</td><td>€ 9.50</td><td>€ 0.24</td></tr>
+        <tr><td>Red wine (for sauce)</td><td>0.080 L</td><td>€ 4.00</td><td>€ 0.32</td></tr>
+        <tr><td>Veal stock</td><td>0.050 L</td><td>€ 6.00</td><td>€ 0.30</td></tr>
+        <tr><td>Chips (portion)</td><td>0.180 kg</td><td>€ 1.20</td><td>€ 0.22</td></tr>
+        <tr><td>Oil, salt, pepper, herbs</td><td>to taste</td><td>—</td><td>€ 0.15</td></tr>
+        <tr class="total"><td colspan="3"><strong>Total ingredient cost</strong></td><td><strong>€ 6.35</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>With a selling price of <strong>€ 22.00 excl. VAT</strong>:</p>
+
+    <div class="formula-box">
+      <div>Food cost ratio = (6.35 ÷ 22.00) × 100 = <span class="highlight">28.9%</span></div>
+      <div style="margin-top:8px">Coefficient = 22.00 ÷ 6.35 = <span class="highlight">3.46×</span></div>
+    </div>
+
+    <div class="callout green">
+      <p>✅ A food cost ratio of 28.9% is excellent for a steak. There is enough margin left to cover fixed costs (rent, staff, energy) and generate profit.</p>
+    </div>
+
+    <h2>How to set the selling price from ingredient cost</h2>
+    <p>The simplest approach is to define your <strong>target coefficient</strong> based on your cost structure, then apply it:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Selling price excl. VAT</span> = Ingredient cost × Target coefficient</div>
+      <div style="margin-top:8px;color:#94a3b8">E.g.: 6.35 × 3.5 = € 22.23 excl. VAT → rounded to € 22.00</div>
+    </div>
+
+    <p>Or reasoning in terms of a target food cost ratio:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Minimum price excl. VAT</span> = Ingredient cost ÷ Target ratio</div>
+      <div style="margin-top:8px;color:#94a3b8">E.g.: 6.35 ÷ 0.30 = € 21.17 excl. VAT (for a 30% ratio)</div>
+    </div>
+
+    <h2>Yield: the mistake you cannot afford to make</h2>
+    <p>One of the most frequent mistakes is calculating ingredient cost without accounting for <strong>yield</strong>. Every raw product loses a portion of its weight during preparation:</p>
+    <ul>
+      <li>Meat: 20–30% cooking loss depending on the cut</li>
+      <li>Whole fish: 50–60% loss when filleting</li>
+      <li>Vegetables: 15–30% depending on trimming</li>
+      <li>Whole shellfish: 60–70% waste</li>
+    </ul>
+
+    <div class="callout">
+      <p>📐 <strong>Real net cost:</strong> if you buy a whole salmon at € 12/kg with a 40% fillet yield, the real cost of the usable fillet is € 12 ÷ 0.40 = <strong>€ 30/kg</strong>.</p>
+    </div>
+
+    <h2>The 5 classic cost price mistakes</h2>
+
+    <h3>1. Not updating purchase prices</h3>
+    <p>Supplier prices change — sometimes significantly for seasonal products. A cost price calculated in January using October prices may be completely wrong. Update your recipe cards whenever there is a significant price change.</p>
+
+    <h3>2. Forgetting condiments and garnishes</h3>
+    <p>Salt, pepper, olive oil, fresh herbs, lemon, base sauces — negligible individually, but they represent 3–5% of total ingredient cost across hundreds of covers. Add a flat-rate "seasoning" line to every recipe.</p>
+
+    <h3>3. Confusing recipe quantity and portion quantity</h3>
+    <p>Always verify that your quantities correspond to <em>one portion</em>, not the whole recipe. A risotto for 4 at € 15.44 ingredient cost is € 3.86 per portion — not € 15.44.</p>
+
+    <h3>4. Ignoring the gap between theoretical and actual</h3>
+    <p>Theft, incorrect portion sizes, kitchen waste — the gap between theoretical and actual food cost typically represents 2–4% of revenue. Compare the two values regularly to spot inefficiencies.</p>
+
+    <h3>5. Not embedding recipe cards in training</h3>
+    <p>A recipe card is only useful if the brigade follows it. Uncontrolled portions or improvised recipes during service can cause the actual food cost to far exceed the theoretical figure.</p>
+
+    <h2>Theoretical vs actual cost price</h2>
+    <p>Comparing these two indicators is essential:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Actual food cost (%)</span></div>
+      <div style="margin-top:8px;color:#94a3b8">= ((Opening stock + Purchases − Closing stock) ÷ Revenue excl. VAT) × 100</div>
+    </div>
+
+    <p>A gap of more than <strong>3–5%</strong> between theoretical and actual signals a problem: waste, inconsistent portions, theft or accounting errors.</p>
+
+    <h2>The essential tool: the recipe card</h2>
+    <p>The <strong>recipe card</strong> is the reference document for every dish. It contains:</p>
+    <ul>
+      <li>All ingredients with their exact gramme weights</li>
+      <li>The yield of each product</li>
+      <li>Unit cost and total portion cost</li>
+      <li>Target selling price and corresponding coefficient</li>
+      <li>Standardised preparation method</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Manage your recipe cards without Excel</h3>
+      <p>Fiche Technique Pro automatically calculates the cost price and coefficient for every dish. Update one ingredient price and all your recipe cards recalculate instantly.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Free 30-day trial</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">See pricing</a>
+      </div>
+      <p style="color:#64748b;font-size:0.82rem;margin:16px 0 0">No credit card. No monthly subscription.</p>
+    </div>
+
+    <h2>Summary: the key steps</h2>
+    <ol>
+      <li>List all ingredients with exact gramme weights per portion</li>
+      <li>Collect current purchase prices from your suppliers</li>
+      <li>Calculate yields (cooking loss / trimming) for each product</li>
+      <li>Apply: Ingredient cost = Σ (net quantity × net price)</li>
+      <li>Divide by the selling price excl. VAT → food cost ratio</li>
+      <li>Compare theoretical and actual ratio every month</li>
+    </ol>
+
+    <div class="callout green">
+      <p>✅ <strong>Golden rule:</strong> your target coefficient must at minimum cover staff costs (≈ 30–35%) + fixed overheads (≈ 15–20%) + desired profit. For most restaurants, a coefficient of 3× to 4× (ratio 25–33%) is the target.</p>
+    </div>
+
+  </article>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Ready to control your restaurant costs?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Try Fiche Technique Pro free for 30 days. No credit card required.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Start your free trial</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Professional food cost calculation software for restaurants.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="prezzi.html">Pricing</a></li>
+          <li><a href="download.html">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contact</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

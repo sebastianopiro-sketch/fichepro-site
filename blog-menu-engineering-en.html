@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Engineering: Stars, Puzzles, Plow Horses and Dogs | Fiche Technique Pro</title>
+<meta name="description" content="The Kasavana & Smith method to classify every dish as a Star, Puzzle, Plow Horse or Dog. Complete matrix, worked example and strategies for each quadrant.">
+<meta property="og:title" content="Menu Engineering: Stars, Puzzles, Plow Horses and Dogs">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero{background:var(--paper2,#f8f4ef);padding:80px 0 48px}
+  .blog-meta{font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#9ca3af);margin-bottom:16px}
+  .blog-hero h1{max-width:720px;margin:0 0 24px}
+  .blog-hero .lead{max-width:600px;color:var(--ink-2,#6b7280)}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .article h2{margin:48px 0 16px;font-size:1.5rem}
+  .article h3{margin:32px 0 12px;font-size:1.15rem}
+  .article p{line-height:1.8;margin-bottom:18px;color:var(--ink-1,#374151)}
+  .article ul,.article ol{padding-left:24px;line-height:1.8;color:var(--ink-1,#374151);margin-bottom:18px}
+  .article li{margin-bottom:8px}
+  .callout{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+  .callout.green{background:#f0fdf4;border-left-color:#16a34a}
+  .callout.amber{background:#fffbeb;border-left-color:#d97706}
+  .callout.red{background:#fef2f2;border-left-color:#dc2626}
+  .callout p{margin:0;color:#1e40af;font-size:0.95rem}
+  .callout.green p{color:#065f46}
+  .callout.amber p{color:#92400e}
+  .callout.red p{color:#991b1b}
+  .formula-box{background:#1a1a2e;color:#e2e8f0;border-radius:12px;padding:24px 28px;margin:28px 0;font-family:'JetBrains Mono',monospace;font-size:1rem;line-height:1.7}
+  .formula-box .highlight{color:#4ade80;font-weight:700}
+  .matrix-wrap{display:flex;gap:0;margin:32px 0}
+  .axis-label{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3,#9ca3af);padding:8px 4px;background:var(--paper2,#f8f4ef);border:2px solid var(--blue,#1a1a2e);border-right:none;border-radius:12px 0 0 12px;text-align:center}
+  .matrix-right{flex:1}
+  .matrix-col-labels{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--blue,#1a1a2e);border-bottom:none;border-radius:12px 12px 0 0;overflow:hidden}
+  .matrix-col-label{padding:8px 16px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3,#9ca3af);background:var(--paper2,#f8f4ef);text-align:center}
+  .matrix-col-label:first-child{border-right:1px solid #e5e7eb}
+  .matrix2{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--blue,#1a1a2e);border-top:none;border-radius:0 0 12px 12px;overflow:hidden}
+  .matrix-cell{padding:24px 20px}
+  .matrix-cell h4{font-size:1.1rem;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+  .matrix-cell p{font-size:0.88rem;margin:0;line-height:1.6;color:var(--ink-2,#6b7280)}
+  .cell-star{background:#fef9c3;border-right:1px solid #fde68a;border-bottom:1px solid #fde68a}
+  .cell-puzzle{background:#eff6ff;border-bottom:1px solid #bfdbfe}
+  .cell-plow{background:#f0fdf4;border-right:1px solid #bbf7d0}
+  .cell-dog{background:#fef2f2}
+  .example-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  .example-table th{background:var(--blue,#1a1a2e);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .example-table td{padding:10px 14px;border-bottom:1px solid var(--border,#e5e7eb);color:var(--ink-1,#374151)}
+  .example-table tr:last-child td{border-bottom:none}
+  .tag{display:inline-block;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:4px}
+  .tag-star{background:#fef9c3;color:#854d0e}
+  .tag-puzzle{background:#eff6ff;color:#1e40af}
+  .tag-plow{background:#f0fdf4;color:#065f46}
+  .tag-dog{background:#fef2f2;color:#991b1b}
+  .cta-box{background:var(--blue,#1a1a2e);border-radius:16px;padding:40px 36px;margin:48px 0;text-align:center;color:#fff}
+  .cta-box h3{color:#fff;margin:0 0 12px;font-size:1.4rem}
+  .cta-box p{color:#94a3b8;margin:0 0 24px}
+  .breadcrumb{font-size:0.82rem;color:var(--ink-3,#9ca3af);margin-bottom:20px}
+  .breadcrumb a{color:var(--ink-3,#9ca3af);text-decoration:none}
+  .lang-versions{display:flex;gap:8px;margin-bottom:24px}
+  .lang-versions a{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--border,#e5e7eb);color:var(--ink-2,#6b7280);text-decoration:none}
+  .lang-versions a.active{background:var(--blue,#1a1a2e);color:#fff;border-color:var(--blue,#1a1a2e)}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Features</a>
+      <a href="prezzi.html" data-t="nav.pricing">Pricing</a>
+      <a href="download.html" data-t="nav.download">Download</a>
+      <a href="blog.html">Blog</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm">Free trial</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> › <a href="blog.html">Blog</a> › Menu Engineering</p>
+    <div class="lang-versions">
+      <a href="blog-menu-engineering-it.html">🇮🇹 IT</a>
+      <a href="blog-menu-engineering-fr.html">🇫🇷 FR</a>
+      <a href="blog-menu-engineering-en.html" class="active">🇬🇧 EN</a>
+    </div>
+    <p class="blog-meta">📊 Menu Strategy · 10 min read</p>
+    <h1 class="display">Menu Engineering: Stars, Puzzles, Plow Horses and Dogs</h1>
+    <p class="lead">The Kasavana &amp; Smith method to classify every dish on your menu by profitability and popularity — and make the right strategic decisions.</p>
+  </div>
+</section>
+
+<div class="container">
+  <article class="article">
+
+    <h2>What is Menu Engineering?</h2>
+    <p><strong>Menu Engineering</strong> is a menu analysis method developed in 1982 by Michael Kasavana and Donald Smith. It classifies each dish according to two dimensions:</p>
+    <ul>
+      <li><strong>Profitability</strong>: the gross margin generated per portion (selling price minus ingredient cost)</li>
+      <li><strong>Popularity</strong>: the number of portions sold over a given period</li>
+    </ul>
+    <p>Crossing these two axes produces a 2×2 matrix with four categories that have become standard terminology in restaurant management worldwide.</p>
+
+    <h2>The 4-quadrant matrix</h2>
+
+    <div class="matrix-wrap">
+      <div class="axis-label">← Low popularity · High popularity →</div>
+      <div class="matrix-right">
+        <div class="matrix-col-labels">
+          <div class="matrix-col-label">Low profitability</div>
+          <div class="matrix-col-label">High profitability</div>
+        </div>
+        <div class="matrix2">
+          <div class="matrix-cell cell-plow">
+            <h4>🐴 Plow Horses</h4>
+            <p>Popular but low-margin. They bring customers in but weigh on profitability.</p>
+          </div>
+          <div class="matrix-cell cell-star">
+            <h4>⭐ Stars</h4>
+            <p>The holy grail: popular AND profitable. Promote them at every opportunity.</p>
+          </div>
+          <div class="matrix-cell cell-dog">
+            <h4>🐕 Dogs</h4>
+            <p>Neither popular nor profitable. The first candidates for removal.</p>
+          </div>
+          <div class="matrix-cell cell-puzzle">
+            <h4>🔧 Puzzles</h4>
+            <p>Profitable but underordered. Their potential is being left on the table.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>How to calculate profitability and popularity</h2>
+
+    <h3>Profitability: gross margin per portion</h3>
+    <p>Profitability is measured not as a percentage but as an absolute value — the <strong>gross margin per portion</strong>:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Gross margin</span> = Selling price − Ingredient cost</div>
+      <div style="margin-top:8px;color:#94a3b8">E.g.: € 22.00 − € 6.35 = € 15.65 margin per portion</div>
+    </div>
+
+    <p>A dish is considered <strong>high profitability</strong> if its gross margin exceeds the weighted average gross margin across all dishes on the menu.</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Average margin</span> = Σ (margin × portions sold) ÷ Total portions sold</div>
+    </div>
+
+    <h3>Popularity: minimum sales threshold</h3>
+    <p>A dish is <strong>popular</strong> if its sales represent at least <strong>70% of its fair share</strong>:</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Fair share</span> = 100% ÷ Number of dishes on the menu</div>
+      <div style="margin-top:8px;color:#94a3b8">E.g.: 15 dishes → fair share = 6.67% → threshold = 6.67 × 0.70 = 4.67%</div>
+    </div>
+
+    <h2>Worked example: brasserie menu analysis</h2>
+
+    <table class="example-table">
+      <thead>
+        <tr><th>Dish</th><th>Sales/month</th><th>Ingredient cost</th><th>Price</th><th>Margin</th><th>Category</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sirloin steak &amp; chips</td><td>148</td><td>€ 9.20</td><td>€ 26.00</td><td>€ 16.80</td><td><span class="tag tag-star">⭐ Star</span></td></tr>
+        <tr><td>Moules marinières</td><td>122</td><td>€ 4.80</td><td>€ 18.00</td><td>€ 13.20</td><td><span class="tag tag-star">⭐ Star</span></td></tr>
+        <tr><td>Shallot bavette</td><td>97</td><td>€ 6.35</td><td>€ 22.00</td><td>€ 15.65</td><td><span class="tag tag-star">⭐ Star</span></td></tr>
+        <tr><td>House beef burger</td><td>201</td><td>€ 5.10</td><td>€ 14.00</td><td>€ 8.90</td><td><span class="tag tag-plow">🐴 Plow Horse</span></td></tr>
+        <tr><td>Croque-monsieur</td><td>178</td><td>€ 2.60</td><td>€ 10.00</td><td>€ 7.40</td><td><span class="tag tag-plow">🐴 Plow Horse</span></td></tr>
+        <tr><td>House foie gras</td><td>34</td><td>€ 12.00</td><td>€ 32.00</td><td>€ 20.00</td><td><span class="tag tag-puzzle">🔧 Puzzle</span></td></tr>
+        <tr><td>Tuna tartare</td><td>28</td><td>€ 8.50</td><td>€ 24.00</td><td>€ 15.50</td><td><span class="tag tag-puzzle">🔧 Puzzle</span></td></tr>
+        <tr><td>Niçoise salad</td><td>19</td><td>€ 4.20</td><td>€ 14.00</td><td>€ 9.80</td><td><span class="tag tag-dog">🐕 Dog</span></td></tr>
+        <tr><td>Ham omelette</td><td>12</td><td>€ 2.10</td><td>€ 9.00</td><td>€ 6.90</td><td><span class="tag tag-dog">🐕 Dog</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2>The 4 strategies to apply by category</h2>
+
+    <h3>⭐ Stars — Keep and promote</h3>
+    <p>Your Stars are the engine of profitability. Priorities:</p>
+    <ul>
+      <li>Position them visually at the top of the menu or in a dedicated highlight box</li>
+      <li>Train staff to recommend them naturally in conversation</li>
+      <li>Maintain consistent quality — this is your reputation</li>
+      <li>Don't lower the price — customers are already ordering them</li>
+    </ul>
+
+    <div class="callout green">
+      <p>✅ The sirloin steak in the example generates € 16.80 × 148 portions = <strong>€ 2,486 gross margin per month</strong>. It is your number-one asset.</p>
+    </div>
+
+    <h3>🐴 Plow Horses — Reduce cost or raise price</h3>
+    <p>Plow Horses are popular: removing them risks disappointing loyal customers. But their low margin is a drag on profitability. Strategies:</p>
+    <ul>
+      <li><strong>Reduce ingredient cost</strong>: renegotiate with your supplier, tweak the recipe slightly</li>
+      <li><strong>Raise the price subtly</strong>: +€1–2 on a €14 dish may go unnoticed by guests but significantly improves margin</li>
+      <li><strong>Reduce visibility</strong>: place them lower on the menu and prioritise Stars in staff recommendations</li>
+    </ul>
+
+    <h3>🔧 Puzzles — Increase visibility and rework the pitch</h3>
+    <p>The house foie gras is profitable but underordered — often a positioning or description problem. Actions:</p>
+    <ul>
+      <li>Rewrite the menu description to be more evocative and appetising</li>
+      <li>Add a photo on a tablet or digital menu</li>
+      <li>Use it as a server suggestion: "I'd recommend our house foie gras tonight…"</li>
+      <li>Build a tasting menu around it</li>
+      <li>If sales still don't improve, consider a small price reduction to broaden appeal</li>
+    </ul>
+
+    <h3>🐕 Dogs — Remove or completely rethink</h3>
+    <ul>
+      <li>Check whether the dish serves a strategic purpose (attracts a specific customer segment)</li>
+      <li>If it has no strategic value, remove it: you simplify the kitchen, reduce waste, and free up menu real estate</li>
+      <li>If you keep it, rethink it entirely: new name, new price, new recipe</li>
+    </ul>
+
+    <div class="callout red">
+      <p>⚠️ An overly long menu hurts profitability: more items = more stock, more waste, more kitchen complexity. 15–20 well-chosen dishes often outperform a 40-item menu of mediocre options.</p>
+    </div>
+
+    <h2>How often should you run the analysis?</h2>
+    <ul>
+      <li><strong>Monthly</strong>: full analysis using sales data from the month</li>
+      <li><strong>Quarterly</strong>: review prices and recipes in response to supplier price changes</li>
+      <li><strong>Annually</strong>: potential menu overhaul (seasonality, new dishes, removals)</li>
+    </ul>
+
+    <h2>The limits of Menu Engineering</h2>
+    <ul>
+      <li>A Dog may be strategically important if it attracts a specific segment (vegetarians, children, allergy sufferers)</li>
+      <li>Gross margin ignores preparation time — a quick dish can outperform a high-margin dish that ties up a chef for 45 minutes</li>
+      <li>Popularity is influenced by menu placement, not just taste</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Automated Menu Engineering in Fiche Technique Pro</h3>
+      <p>Import your sales data, adjust the profitability and popularity thresholds, and instantly get the Stars / Puzzles / Plow Horses / Dogs matrix for your entire menu.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Free 30-day trial</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Pro Plus pricing</a>
+      </div>
+      <p style="color:#64748b;font-size:0.82rem;margin:16px 0 0">Menu Engineering feature available in Pro Plus plan.</p>
+    </div>
+
+    <h2>Summary</h2>
+    <ol>
+      <li>Calculate the gross margin for every dish (price − ingredient cost)</li>
+      <li>Find the sales-weighted average margin → profitability threshold</li>
+      <li>Calculate fair share × 70% → popularity threshold</li>
+      <li>Classify each dish: Star / Puzzle / Plow Horse / Dog</li>
+      <li>Apply the appropriate strategy for each quadrant</li>
+      <li>Repeat monthly and measure the impact on your margins</li>
+    </ol>
+
+  </article>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Ready to optimise your menu?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Fiche Technique Pro calculates the Menu Engineering matrix automatically. Free 30-day trial.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Start your free trial</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Professional food cost calculation software for restaurants.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="prezzi.html">Pricing</a></li>
+          <li><a href="download.html">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contact</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

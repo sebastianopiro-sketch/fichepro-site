@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment calculer le food cost d'un plat | Fiche Technique Pro</title>
+<meta name="description" content="Guide complet sur le food cost en restauration : formule, exemples chiffrés, coefficient multiplicateur et stratégies pour rester entre 25 % et 35 %.">
+<meta property="og:title" content="Comment calculer le food cost d'un plat">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero{background:var(--paper2,#f8f4ef);padding:80px 0 48px}
+  .blog-meta{font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#9ca3af);margin-bottom:16px}
+  .blog-hero h1{max-width:720px;margin:0 0 24px}
+  .blog-hero .lead{max-width:600px;color:var(--ink-2,#6b7280)}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .article h2{margin:48px 0 16px;font-size:1.5rem}
+  .article h3{margin:32px 0 12px;font-size:1.15rem}
+  .article p{line-height:1.8;margin-bottom:18px;color:var(--ink-1,#374151)}
+  .article ul,.article ol{padding-left:24px;line-height:1.8;color:var(--ink-1,#374151);margin-bottom:18px}
+  .article li{margin-bottom:8px}
+  .callout{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+  .callout.green{background:#f0fdf4;border-left-color:#16a34a}
+  .callout.amber{background:#fffbeb;border-left-color:#d97706}
+  .callout p{margin:0;color:#1e40af;font-size:0.95rem}
+  .callout.green p{color:#065f46}
+  .callout.amber p{color:#92400e}
+  .formula-box{background:#1a1a2e;color:#e2e8f0;border-radius:12px;padding:24px 28px;margin:28px 0;font-family:'JetBrains Mono',monospace;font-size:1rem;line-height:1.7}
+  .formula-box .highlight{color:#4ade80;font-weight:700}
+  .example-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  .example-table th{background:var(--blue,#1a1a2e);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .example-table td{padding:10px 14px;border-bottom:1px solid var(--border,#e5e7eb);color:var(--ink-1,#374151)}
+  .example-table tr:last-child td{border-bottom:none}
+  .example-table .total{font-weight:700;background:var(--paper2,#f8f4ef)}
+  .cta-box{background:var(--blue,#1a1a2e);border-radius:16px;padding:40px 36px;margin:48px 0;text-align:center;color:#fff}
+  .cta-box h3{color:#fff;margin:0 0 12px;font-size:1.4rem}
+  .cta-box p{color:#94a3b8;margin:0 0 24px}
+  .breadcrumb{font-size:0.82rem;color:var(--ink-3,#9ca3af);margin-bottom:20px}
+  .breadcrumb a{color:var(--ink-3,#9ca3af);text-decoration:none}
+  .lang-versions{display:flex;gap:8px;margin-bottom:24px}
+  .lang-versions a{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:6px;border:1px solid var(--border,#e5e7eb);color:var(--ink-2,#6b7280);text-decoration:none}
+  .lang-versions a.active{background:var(--blue,#1a1a2e);color:#fff;border-color:var(--blue,#1a1a2e)}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Fonctionnalités</a>
+      <a href="prezzi.html" data-t="nav.pricing">Tarifs</a>
+      <a href="download.html" data-t="nav.download">Télécharger</a>
+      <a href="blog.html">Blog</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm">Essai gratuit</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › <a href="blog.html">Blog</a> › Food Cost</p>
+    <div class="lang-versions">
+      <a href="blog-food-cost-it.html">🇮🇹 IT</a>
+      <a href="blog-food-cost-fr.html" class="active">🇫🇷 FR</a>
+      <a href="blog-food-cost-en.html">🇬🇧 EN</a>
+    </div>
+    <p class="blog-meta">📊 Gestion Restauration · 8 min de lecture</p>
+    <h1 class="display">Comment calculer le food cost d'un plat</h1>
+    <p class="lead">Formule complète, exemples pratiques et stratégies pour maintenir votre food cost entre 25 % et 35 % et optimiser la rentabilité de chaque plat.</p>
+  </div>
+</section>
+
+<div class="container">
+  <article class="article">
+
+    <h2>Qu'est-ce que le food cost ?</h2>
+    <p>Le <strong>food cost</strong> (ou ratio matières) est le coût des ingrédients nécessaires pour préparer un plat, exprimé en pourcentage du prix de vente. C'est l'un des indicateurs les plus importants en restauration : le maîtriser fait la différence entre un restaurant rentable et un établissement qui travaille à perte.</p>
+
+    <div class="callout amber">
+      <p>⚡ En moyenne, un restaurant sain maintient son food cost entre <strong>25 % et 35 %</strong> du prix de vente. Au-delà de 40 %, les marges deviennent critiques.</p>
+    </div>
+
+    <h2>La formule du food cost</h2>
+    <p>Deux formules complémentaires sont indispensables :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Food Cost % </span>= (Coût ingrédients ÷ Prix de vente) × 100</div>
+      <div style="margin-top:16px"><span class="highlight">Coefficient </span>= Prix de vente ÷ Coût ingrédients</div>
+    </div>
+
+    <p>Le <strong>coefficient multiplicateur</strong> est très utilisé en restauration professionnelle : il indique combien de fois le prix de vente est supérieur au coût matière. Un coefficient de 3,5× correspond à un food cost de 28,6 %.</p>
+
+    <h2>Exemple pratique : Risotto aux champignons</h2>
+    <p>Calculons le food cost d'un risotto aux champignons, étape par étape.</p>
+
+    <table class="example-table">
+      <thead>
+        <tr><th>Ingrédient</th><th>Quantité</th><th>Prix/kg</th><th>Coût</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Riz Carnaroli</td><td>0,180 kg</td><td>€ 4,20</td><td>€ 0,76</td></tr>
+        <tr><td>Champignons porcini séchés</td><td>0,025 kg</td><td>€ 48,00</td><td>€ 1,20</td></tr>
+        <tr><td>Oignon blanc</td><td>0,060 kg</td><td>€ 1,80</td><td>€ 0,11</td></tr>
+        <tr><td>Bouillon de légumes</td><td>0,500 L</td><td>€ 0,90</td><td>€ 0,45</td></tr>
+        <tr><td>Beurre</td><td>0,040 kg</td><td>€ 9,50</td><td>€ 0,38</td></tr>
+        <tr><td>Parmesan reggiano</td><td>0,030 kg</td><td>€ 28,00</td><td>€ 0,84</td></tr>
+        <tr><td>Huile, sel, poivre</td><td>q.s.</td><td>—</td><td>€ 0,12</td></tr>
+        <tr class="total"><td colspan="3"><strong>Coût total ingrédients</strong></td><td><strong>€ 3,86</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>Pour un prix de vente de <strong>€ 15,00</strong> :</p>
+
+    <div class="formula-box">
+      <div>Food Cost % = (3,86 ÷ 15,00) × 100 = <span class="highlight">25,7 %</span></div>
+      <div style="margin-top:8px">Coefficient = 15,00 ÷ 3,86 = <span class="highlight">3,88×</span></div>
+    </div>
+
+    <div class="callout green">
+      <p>✅ Un food cost de 25,7 % est excellent. Il reste suffisamment de marge pour couvrir les charges fixes (loyer, personnel, énergie) et générer un bénéfice.</p>
+    </div>
+
+    <h2>Comment calculer le prix de vente correct</h2>
+    <p>Si vous avez un <strong>objectif de food cost</strong> (ex. 30 %), vous pouvez en déduire le prix de vente minimum :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Prix minimum</span> = Coût ingrédients ÷ Objectif food cost</div>
+      <div style="margin-top:8px;color:#94a3b8">Ex : 3,86 ÷ 0,30 = € 12,87 (prix minimum pour FC 30 %)</div>
+    </div>
+
+    <p>Ou en utilisant le coefficient multiplicateur :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Prix</span> = Coût ingrédients × Coefficient souhaité</div>
+      <div style="margin-top:8px;color:#94a3b8">Ex : 3,86 × 3,5 = € 13,51 (coeff. 3,5× = FC 28,6 %)</div>
+    </div>
+
+    <h2>Les 5 erreurs les plus fréquentes</h2>
+
+    <h3>1. Ignorer les pertes et les déchets</h3>
+    <p>Chaque ingrédient a un <strong>taux de rendement</strong> : la viande crue perd 20 à 30 % à la cuisson, les légumes perdent du poids lors du parage. Sans en tenir compte, votre food cost sera sous-estimé.</p>
+
+    <div class="callout">
+      <p>📐 <strong>Rendement en pratique :</strong> si vous achetez 1 kg de filet à € 32/kg avec un rendement de 75 %, le coût réel est € 32 ÷ 0,75 = € 42,67/kg.</p>
+    </div>
+
+    <h3>2. Ne pas mettre à jour les prix fournisseurs</h3>
+    <p>Les prix des matières premières évoluent. Un food cost calculé en janvier peut être totalement inexact en septembre. Révisez vos coûts au moins chaque trimestre ou à chaque changement tarifaire significatif.</p>
+
+    <h3>3. Négliger les petits ingrédients</h3>
+    <p>Sel, poivre, huile, vinaigre, herbes aromatiques — ils semblent négligeables mais représentent 3 à 5 % du coût total sur des centaines de couverts. Intégrez une ligne forfaitaire "assaisonnements" dans chaque fiche.</p>
+
+    <h3>4. Confondre coût au kg et coût par portion</h3>
+    <p>Chaque plat a ses propres grammages. Il ne suffit pas de connaître le prix d'un ingrédient au kg : il faut le multiplier par la quantité exacte utilisée dans la recette.</p>
+
+    <h3>5. Ne pas contrôler les variations entre services</h3>
+    <p>Le food cost réel peut varier entre le service du midi et celui du soir, entre semaine et week-end. Calculez le food cost par menu et par service pour identifier des inefficacités spécifiques.</p>
+
+    <h2>Food cost théorique vs food cost réel</h2>
+    <p>Il existe deux types de food cost que chaque restaurateur doit surveiller :</p>
+    <ul>
+      <li><strong>Food cost théorique</strong> : calculé en additionnant le coût des recettes multiplié par le nombre de portions vendues. C'est la valeur "idéale" sans aucun gaspillage.</li>
+      <li><strong>Food cost réel</strong> : calculé par inventaire physique (stock initial + achats − stock final) divisé par le chiffre d'affaires de la période.</li>
+    </ul>
+    <p>Un écart supérieur à <strong>3-5 %</strong> entre les deux révèle des problèmes : gaspillage, vol, portions non respectées ou recettes improvisées.</p>
+
+    <h2>Menu Engineering : croiser food cost et popularité</h2>
+    <p>Connaître le food cost de chaque plat est la première étape. La deuxième est de le croiser avec la <strong>popularité</strong> (nombre de portions vendues) :</p>
+    <ul>
+      <li>⭐ <strong>Stars</strong> : haute rentabilité + forte popularité → à conserver et promouvoir</li>
+      <li>🔧 <strong>Puzzles</strong> : haute rentabilité + faible popularité → travailler la mise en avant</li>
+      <li>🐴 <strong>Plow Horses</strong> : faible rentabilité + forte popularité → réduire les coûts ou augmenter le prix</li>
+      <li>🐕 <strong>Dogs</strong> : faible rentabilité + faible popularité → envisager de les supprimer</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Calculez le food cost de chaque plat en quelques secondes</h3>
+      <p>Fiche Technique Pro gère ingrédients, quantités, prix et calcule automatiquement food cost et coefficient. Fonctionne hors ligne, sans abonnement mensuel.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Essai gratuit 30 jours</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Voir les tarifs</a>
+      </div>
+      <p style="color:#64748b;font-size:0.82rem;margin:16px 0 0">Sans carte bancaire. Sans abonnement.</p>
+    </div>
+
+    <h2>Récapitulatif : les étapes clés</h2>
+    <ol>
+      <li>Listez tous les ingrédients avec les grammages exacts par portion</li>
+      <li>Mettez à jour les prix d'achat régulièrement</li>
+      <li>Appliquez les coefficients de rendement (pertes cuisson / parage)</li>
+      <li>Calculez : Food Cost % = Coût ÷ Prix × 100</li>
+      <li>Comparez food cost théorique et réel chaque mois</li>
+      <li>Utilisez le Menu Engineering pour optimiser la carte</li>
+    </ol>
+
+    <div class="callout green">
+      <p>✅ <strong>Objectif :</strong> food cost entre 25 % et 35 % pour la plupart des plats. Vous pouvez accepter jusqu'à 40 % si le plat génère un fort volume de ventes ou attire des clients vers des plats plus rentables.</p>
+    </div>
+
+  </article>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Prêt à maîtriser vos coûts ?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Essai gratuit 30 jours. Sans carte bancaire.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Commencer l'essai gratuit</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Logiciel professionnel de calcul du coût de revient en restauration.</p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="index.html#features">Fonctionnalités</a></li>
+          <li><a href="prezzi.html">Tarifs</a></li>
+          <li><a href="download.html">Télécharger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contact</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
