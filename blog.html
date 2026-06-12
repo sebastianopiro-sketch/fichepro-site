@@ -148,7 +148,7 @@
   <div class="blog-grid">
 
     <!-- Article 1 — IT -->
-    <article class="blog-card">
+    <article class="blog-card" data-lang="it">
       <div class="card-header">
         <span class="card-icon">📊</span>
         <div>
@@ -165,7 +165,7 @@
     </article>
 
     <!-- Article 2 — FR -->
-    <article class="blog-card">
+    <article class="blog-card" data-lang="fr">
       <div class="card-header">
         <span class="card-icon">🧮</span>
         <div>
@@ -182,7 +182,7 @@
     </article>
 
     <!-- Article 3 — FR -->
-    <article class="blog-card">
+    <article class="blog-card" data-lang="fr">
       <div class="card-header">
         <span class="card-icon">⭐</span>
         <div>
@@ -199,7 +199,7 @@
     </article>
 
     <!-- Article 4 — EN -->
-    <article class="blog-card">
+    <article class="blog-card" data-lang="en">
       <div class="card-header">
         <span class="card-icon">🛠️</span>
         <div>
@@ -256,5 +256,20 @@
 </footer>
 
 <script src="assets/main.js"></script>
+<script>
+  function filterBlogCards() {
+    document.querySelectorAll('.blog-card[data-lang]').forEach(card => {
+      card.style.display = card.dataset.lang === currentLang ? '' : 'none';
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // main.js already added its click handlers; these run after, reading the updated currentLang
+    document.querySelectorAll('.lang-sw button').forEach(b => {
+      b.addEventListener('click', () => filterBlogCards());
+    });
+    filterBlogCards();
+  });
+</script>
 </body>
 </html>
