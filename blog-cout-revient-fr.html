@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comment calculer le coût de revient d'un plat | Fiche Technique Pro</title>
+<meta name="description" content="Guide complet pour calculer le coût de revient en restauration. Formule, exemples pratiques, coefficient multiplicateur et stratégies pour optimiser vos marges.">
+<meta property="og:title" content="Comment calculer le coût de revient d'un plat">
+<meta property="og:description" content="Formule, exemples et outils pour calculer le coût de revient en restauration. Améliorez la rentabilité de chaque plat.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero{background:var(--paper2,#f8f4ef);padding:80px 0 48px}
+  .blog-meta{font-size:0.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3,#9ca3af);margin-bottom:16px}
+  .blog-hero h1{max-width:720px;margin:0 0 24px}
+  .blog-hero .lead{max-width:600px;color:var(--ink-2,#6b7280)}
+  .article{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+  .article h2{margin:48px 0 16px;font-size:1.5rem}
+  .article h3{margin:32px 0 12px;font-size:1.15rem}
+  .article p{line-height:1.8;margin-bottom:18px;color:var(--ink-1,#374151)}
+  .article ul,.article ol{padding-left:24px;line-height:1.8;color:var(--ink-1,#374151);margin-bottom:18px}
+  .article li{margin-bottom:8px}
+  .callout{background:#eff6ff;border-left:4px solid #2563eb;border-radius:0 8px 8px 0;padding:16px 20px;margin:24px 0}
+  .callout.green{background:#f0fdf4;border-left-color:#16a34a}
+  .callout.amber{background:#fffbeb;border-left-color:#d97706}
+  .callout p{margin:0;color:#1e40af;font-size:0.95rem}
+  .callout.green p{color:#065f46}
+  .callout.amber p{color:#92400e}
+  .formula-box{background:#1a1a2e;color:#e2e8f0;border-radius:12px;padding:24px 28px;margin:28px 0;font-family:'JetBrains Mono',monospace;font-size:1rem;line-height:1.7}
+  .formula-box .highlight{color:#4ade80;font-weight:700}
+  .example-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  .example-table th{background:var(--blue,#1a1a2e);color:#fff;padding:10px 14px;text-align:left;font-weight:600}
+  .example-table td{padding:10px 14px;border-bottom:1px solid var(--border,#e5e7eb);color:var(--ink-1,#374151)}
+  .example-table tr:last-child td{border-bottom:none}
+  .example-table .total{font-weight:700;background:var(--paper2,#f8f4ef)}
+  .cta-box{background:var(--blue,#1a1a2e);border-radius:16px;padding:40px 36px;margin:48px 0;text-align:center;color:#fff}
+  .cta-box h3{color:#fff;margin:0 0 12px;font-size:1.4rem}
+  .cta-box p{color:#94a3b8;margin:0 0 24px}
+  .breadcrumb{font-size:0.82rem;color:var(--ink-3,#9ca3af);margin-bottom:20px}
+  .breadcrumb a{color:var(--ink-3,#9ca3af);text-decoration:none}
+  .breadcrumb a:hover{color:var(--ink-1,#374151)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span>🍽️</span> Fiche Technique Pro
+    </a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features">Fonctionnalités</a>
+      <a href="prezzi.html">Tarifs</a>
+      <a href="download.html">Télécharger</a>
+      <a href="contatti.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm">Essai gratuit</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Accueil</a> › Blog › Coût de revient</p>
+    <p class="blog-meta">📊 Gestion Restauration · 8 min de lecture</p>
+    <h1 class="display">Comment calculer le coût de revient d'un plat</h1>
+    <p class="lead">Formule complète, exemples détaillés et stratégies pour maîtriser vos coûts matières et optimiser la rentabilité de chaque plat.</p>
+  </div>
+</section>
+
+<div class="container">
+  <article class="article">
+
+    <h2>Qu'est-ce que le coût de revient ?</h2>
+    <p>Le <strong>coût de revient</strong> (ou coût matière) d'un plat représente le coût total des ingrédients nécessaires pour le réaliser. En restauration professionnelle, il est généralement exprimé en euros pour une portion et en pourcentage du prix de vente — c'est ce qu'on appelle le <strong>ratio matières</strong> ou <strong>food cost</strong>.</p>
+
+    <div class="callout amber">
+      <p>⚡ Un restaurant bien géré maintient son ratio matières entre <strong>25 % et 35 %</strong> du prix de vente. Au-delà de 40 %, les marges deviennent critiques et compromettent la viabilité de l'établissement.</p>
+    </div>
+
+    <h2>Les formules de base</h2>
+    <p>Deux indicateurs complémentaires sont indispensables :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Ratio matières (%) </span>= (Coût ingrédients ÷ Prix de vente HT) × 100</div>
+      <div style="margin-top:16px"><span class="highlight">Coefficient multiplicateur </span>= Prix de vente HT ÷ Coût ingrédients</div>
+    </div>
+
+    <p>Le <strong>coefficient multiplicateur</strong> est très utilisé en cuisine professionnelle française. Un coefficient de 3,5 correspond à un ratio matières de 28,6 %. En pratique, les cuisiniers définissent souvent leur prix de vente en multipliant directement le coût matière par le coefficient cible.</p>
+
+    <h2>Exemple pratique : Bavette d'aloyau aux échalotes</h2>
+    <p>Calculons le coût de revient d'une bavette — plat brasserie par excellence — pour une portion.</p>
+
+    <table class="example-table">
+      <thead>
+        <tr><th>Ingrédient</th><th>Quantité</th><th>Prix/kg</th><th>Coût</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Bavette d'aloyau (brute)</td><td>0,220 kg</td><td>€ 22,00</td><td>€ 4,84</td></tr>
+        <tr><td>Échalotes</td><td>0,080 kg</td><td>€ 3,50</td><td>€ 0,28</td></tr>
+        <tr><td>Beurre</td><td>0,025 kg</td><td>€ 9,50</td><td>€ 0,24</td></tr>
+        <tr><td>Vin rouge (pour sauce)</td><td>0,080 L</td><td>€ 4,00</td><td>€ 0,32</td></tr>
+        <tr><td>Fond de veau</td><td>0,050 L</td><td>€ 6,00</td><td>€ 0,30</td></tr>
+        <tr><td>Frites (portion)</td><td>0,180 kg</td><td>€ 1,20</td><td>€ 0,22</td></tr>
+        <tr><td>Huile, sel, poivre, herbes</td><td>q.s.</td><td>—</td><td>€ 0,15</td></tr>
+        <tr class="total"><td colspan="3"><strong>Coût matière total</strong></td><td><strong>€ 6,35</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>Pour un prix de vente de <strong>€ 22,00 HT</strong> :</p>
+
+    <div class="formula-box">
+      <div>Ratio matières = (6,35 ÷ 22,00) × 100 = <span class="highlight">28,9 %</span></div>
+      <div style="margin-top:8px">Coefficient = 22,00 ÷ 6,35 = <span class="highlight">3,46×</span></div>
+    </div>
+
+    <div class="callout green">
+      <p>✅ Un ratio de 28,9 % est excellent pour une bavette. Il reste suffisamment de marge pour couvrir les charges fixes (loyer, personnel, énergie) et dégager un bénéfice.</p>
+    </div>
+
+    <h2>Comment fixer le prix de vente à partir du coût matière</h2>
+    <p>La démarche la plus simple consiste à définir votre <strong>coefficient cible</strong> en fonction de votre structure de coûts, puis de l'appliquer :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Prix de vente HT</span> = Coût matière × Coefficient cible</div>
+      <div style="margin-top:8px;color:#94a3b8">Ex : 6,35 × 3,5 = € 22,23 HT → arrondi à € 22,00 HT</div>
+    </div>
+
+    <p>Ou si vous raisonnez en ratio matières cible :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Prix minimum HT</span> = Coût matière ÷ Ratio cible</div>
+      <div style="margin-top:8px;color:#94a3b8">Ex : 6,35 ÷ 0,30 = € 21,17 HT (pour un ratio de 30 %)</div>
+    </div>
+
+    <h2>Le rendement matière : une erreur à ne pas commettre</h2>
+    <p>Une des erreurs les plus fréquentes est de calculer le coût matière sans tenir compte du <strong>rendement</strong> des ingrédients. Chaque produit brut perd une partie de son poids lors de la préparation :</p>
+
+    <ul>
+      <li>Viande : 20 à 30 % de perte à la cuisson selon le morceau</li>
+      <li>Poisson entier : 50 à 60 % de perte au filetage</li>
+      <li>Légumes : 15 à 30 % selon le parage</li>
+      <li>Crustacés entiers : 60 à 70 % de déchets</li>
+    </ul>
+
+    <div class="callout">
+      <p>📐 <strong>Coût net réel :</strong> si vous achetez un saumon entier à € 12/kg avec un rendement de 40 % en filets utilisables, le coût réel du filet est € 12 ÷ 0,40 = <strong>€ 30/kg</strong>.</p>
+    </div>
+
+    <h2>Les 5 erreurs classiques dans le calcul du coût de revient</h2>
+
+    <h3>1. Ne pas mettre à jour les prix d'achat</h3>
+    <p>Les tarifs fournisseurs évoluent — parfois fortement pour les produits saisonniers. Un coût de revient calculé en janvier avec les prix d'octobre peut être totalement faux. Mettez à jour vos fiches techniques à chaque changement tarifaire significatif.</p>
+
+    <h3>2. Oublier les condiments et garnitures</h3>
+    <p>Sel, poivre, huile d'olive, herbes fraîches, citron, sauces de base — ils semblent négligeables à l'unité mais représentent 3 à 5 % du coût matière global. Créez une ligne "assaisonnements" forfaitaire dans chaque fiche.</p>
+
+    <h3>3. Confondre grammes et portions</h3>
+    <p>Vérifiez toujours que vos quantités correspondent à <em>une portion</em>, pas à la recette entière. Un risotto pour 4 personnes à € 15,44 de coût matière coûte € 3,86 par portion — pas € 15,44.</p>
+
+    <h3>4. Ignorer la démarque inconnue</h3>
+    <p>Vol, erreurs de portions, gaspillage en cuisine — la démarque inconnue représente souvent 2 à 4 % du chiffre d'affaires. Comparez régulièrement votre <strong>food cost théorique</strong> (calculé sur les recettes) avec votre <strong>food cost réel</strong> (calculé par inventaire).</p>
+
+    <h3>5. Ne pas intégrer les fiches techniques dans la formation</h3>
+    <p>La fiche technique n'est utile que si la brigade la respecte. Des portions non contrôlées ou des recettes improvisées en service peuvent faire exploser le food cost réel par rapport au théorique.</p>
+
+    <h2>Coût de revient théorique vs réel</h2>
+    <p>La comparaison entre ces deux indicateurs est fondamentale :</p>
+
+    <div class="formula-box">
+      <div><span class="highlight">Food cost réel (%)</span></div>
+      <div style="margin-top:8px;color:#94a3b8">= ((Stock initial + Achats − Stock final) ÷ CA HT) × 100</div>
+    </div>
+
+    <p>Un écart supérieur à <strong>3-5 %</strong> entre food cost théorique et réel signale un problème : gaspillage, portions non respectées, vol ou erreurs de comptabilité matière.</p>
+
+    <h2>L'outil indispensable : la fiche technique</h2>
+    <p>La <strong>fiche technique</strong> est le document de référence de chaque plat. Elle liste :</p>
+    <ul>
+      <li>Tous les ingrédients avec leurs grammages précis</li>
+      <li>Le rendement de chaque produit</li>
+      <li>Le coût unitaire et le coût total de la portion</li>
+      <li>Le prix de vente cible et le coefficient correspondant</li>
+      <li>La méthode de préparation standardisée</li>
+    </ul>
+
+    <p>Gérer des fiches techniques sur papier ou sur Excel devient vite complexe dès qu'on a plusieurs dizaines de plats et que les prix évoluent régulièrement.</p>
+
+    <div class="cta-box">
+      <h3>Gérez vos fiches techniques sans Excel</h3>
+      <p>Fiche Technique Pro calcule automatiquement le coût de revient et le coefficient de chaque plat. Mettez à jour un prix d'ingrédient et toutes vos fiches sont recalculées instantanément.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Essai gratuit 30 jours</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff">Voir les tarifs</a>
+      </div>
+      <p style="color:#64748b;font-size:0.82rem;margin:16px 0 0">Sans carte bancaire. Sans abonnement mensuel.</p>
+    </div>
+
+    <h2>Récapitulatif : les étapes clés</h2>
+    <ol>
+      <li>Listez tous les ingrédients avec les grammages exacts par portion</li>
+      <li>Relevez les prix d'achat HT actuels auprès de vos fournisseurs</li>
+      <li>Calculez les rendements (perte cuisson / parage) pour chaque produit</li>
+      <li>Appliquez : Coût matière = Σ (quantité nette × prix net)</li>
+      <li>Divisez par le prix de vente HT → ratio matières</li>
+      <li>Comparez ratio théorique et réel chaque mois</li>
+    </ol>
+
+    <div class="callout green">
+      <p>✅ <strong>Règle d'or :</strong> votre coefficient cible doit au minimum couvrir vos charges de personnel (≈ 30-35 %) + charges fixes (≈ 15-20 %) + bénéfice souhaité. Pour la plupart des restaurants, un coefficient de 3× à 4× (ratio 25-33 %) est l'objectif.</p>
+    </div>
+
+  </article>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Prêt à maîtriser vos coûts matières ?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Essayez Fiche Technique Pro gratuitement pendant 30 jours. Sans carte bancaire.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Commencer l'essai gratuit</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Logiciel professionnel de calcul du coût de revient en restauration.</p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="index.html#features">Fonctionnalités</a></li>
+          <li><a href="prezzi.html">Tarifs</a></li>
+          <li><a href="download.html">Télécharger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contact</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
