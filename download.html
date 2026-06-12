@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Télécharger — Fiche Technique Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Fonctionnalités</a>
+      <a href="prezzi.html" data-t="nav.pricing">Tarifs</a>
+      <a href="download.html" data-t="nav.download">Télécharger</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-48">
+      <p class="eyebrow mb-8">Download</p>
+      <h2 data-t="download.title">Télécharger Fiche Technique Pro</h2>
+      <p class="lead mt-16" style="margin:16px auto 0" data-t="download.sub">Disponible sur Mac et Windows. Nécessite Python 3.8+.</p>
+    </div>
+
+    <div class="grid-2" style="max-width:800px;margin:0 auto 64px">
+      <!-- Mac -->
+      <div class="download-card">
+        <div class="os-icon">🍎</div>
+        <h3 data-t="download.mac_title">Pour Mac</h3>
+        <p data-t="download.mac_desc">macOS 10.14 Mojave ou supérieur. Intel et Apple Silicon.</p>
+        <a href="#" class="btn btn-dark" style="width:100%;justify-content:center" data-t="download.mac_btn">
+          Télécharger pour Mac
+        </a>
+        <p class="download-req" data-t="download.req">Nécessite Python 3.8+</p>
+      </div>
+      <!-- Windows -->
+      <div class="download-card">
+        <div class="os-icon">🪟</div>
+        <h3 data-t="download.win_title">Pour Windows</h3>
+        <p data-t="download.win_desc">Windows 10 ou supérieur. 64 bits. Python requis.</p>
+        <a href="#" class="btn btn-dark" style="width:100%;justify-content:center" data-t="download.win_btn">
+          Télécharger pour Windows
+        </a>
+        <p class="download-req" data-t="download.req">Nécessite Python 3.8+</p>
+      </div>
+    </div>
+
+    <!-- Installation steps -->
+    <div style="max-width:640px;margin:0 auto">
+      <h2 class="mb-24 text-center" data-t="download.steps_title">Comment installer</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3 data-t="download.s1">Téléchargez et décompressez le fichier ZIP</h3>
+            <p>Déposez le dossier où vous voulez sur votre ordinateur.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3 data-t="download.s2">Lancez l'application</h3>
+            <p>Sur Windows : double-clic sur <code style="background:var(--paper-2);padding:2px 6px;border-radius:4px;font-size:12px">AVVIA.bat</code><br>
+            Sur Mac : double-clic sur <code style="background:var(--paper-2);padding:2px 6px;border-radius:4px;font-size:12px">AVVIA_MAC.command</code></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3 data-t="download.s3">Activez votre licence</h3>
+            <p>L'app s'ouvre dans votre navigateur. Allez dans Paramètres et saisissez la clé reçue par email.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3 data-t="download.s4">Commencez !</h3>
+            <p>Créez votre première fiche technique et voyez le coefficient s'afficher en temps réel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Python note -->
+    <div style="max-width:640px;margin:40px auto 0;background:var(--paper-2);border-radius:14px;padding:24px">
+      <h3 style="margin-bottom:8px">⚙️ Python requis</h3>
+      <p style="font-size:0.9rem;color:var(--ink-2);margin-bottom:12px">Fiche Technique Pro nécessite Python 3.8 ou supérieur. Si vous ne l'avez pas encore :</p>
+      <a href="https://www.python.org/downloads/" target="_blank" class="btn btn-outline btn-sm">Télécharger Python →</a>
+      <p style="font-size:0.78rem;color:var(--ink-3);margin-top:10px">⚠️ Sur Windows, cochez "Add Python to PATH" pendant l'installation.</p>
+    </div>
+
+    <!-- No licence yet -->
+    <div style="text-align:center;margin-top:48px;padding:32px;border:2px dashed var(--border);border-radius:16px">
+      <h3 style="margin-bottom:8px">Pas encore de licence ?</h3>
+      <p style="color:var(--ink-2);margin-bottom:20px;font-size:0.9rem">Commencez avec l'essai gratuit de 30 jours — aucune carte bancaire requise.</p>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary" data-t="nav.trial">Essai gratuit 30 jours</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. <span data-t="footer.rights">Tous droits réservés.</span></p>
+      <div class="lang-sw">
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Fiche Technique Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo"><span>🍽️</span> Fiche Technique Pro</a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Fonctionnalités</a>
+      <a href="prezzi.html" data-t="nav.pricing">Tarifs</a>
+      <a href="download.html" data-t="nav.download">Télécharger</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center mb-48">
+      <p class="eyebrow mb-8">Contact</p>
+      <h2 data-t="contact.title">Nous contacter</h2>
+      <p class="lead mt-16" style="margin:16px auto 0" data-t="contact.sub">Questions, problèmes techniques ou demandes de démo ? Nous sommes là.</p>
+    </div>
+
+    <div class="grid-2" style="max-width:900px;margin:0 auto;gap:64px">
+      <!-- Form -->
+      <div>
+        <form id="contact-form" class="contact-form" style="max-width:none">
+          <div class="form-group">
+            <label data-t="contact.name">Nom</label>
+            <input type="text" name="name" required data-t-placeholder="contact.name">
+          </div>
+          <div class="form-group">
+            <label data-t="contact.email">Email</label>
+            <input type="email" name="email" required placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label data-t="contact.subject">Objet</label>
+            <select name="subject">
+              <option data-t="contact.s_support">Support technique</option>
+              <option data-t="contact.s_sales">Ventes / Démo</option>
+              <option data-t="contact.s_other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-t="contact.msg">Message</label>
+            <textarea name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" data-t="contact.send">Envoyer le message</button>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <h3 style="margin-bottom:24px">Autres façons de nous joindre</h3>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="font-size:24px;flex-shrink:0">📧</div>
+            <div>
+              <h4 style="margin-bottom:4px;font-size:0.9rem">Email direct</h4>
+              <a href="mailto:support@fichepro.com" style="color:var(--red);font-size:0.9rem">support@fichepro.com</a>
+              <p style="font-size:0.78rem;color:var(--ink-3);margin-top:2px">Réponse en 24h ouvrées</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="font-size:24px;flex-shrink:0">⏱️</div>
+            <div>
+              <h4 style="margin-bottom:4px;font-size:0.9rem">Horaires support</h4>
+              <p style="font-size:0.9rem;color:var(--ink-2)">Lun – Ven, 9h – 18h CET</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="font-size:24px;flex-shrink:0">🌍</div>
+            <div>
+              <h4 style="margin-bottom:4px;font-size:0.9rem">Langues</h4>
+              <p style="font-size:0.9rem;color:var(--ink-2)">Italiano · Français · English</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:40px;padding:20px;background:var(--paper-2);border-radius:12px">
+          <h4 style="margin-bottom:8px;font-size:0.9rem">Problème d'activation ?</h4>
+          <p style="font-size:0.85rem;color:var(--ink-2);margin-bottom:12px">Incluez votre numéro de commande dans le message pour une réponse plus rapide.</p>
+          <a href="prezzi.html" class="btn btn-outline btn-sm" data-t="nav.trial">Démarrer un essai gratuit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. <span data-t="footer.rights">Tous droits réservés.</span></p>
+      <div class="lang-sw">
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

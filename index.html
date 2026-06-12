@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche Technique Pro — Calcul du coût de revient restauration</title>
+<meta name="description" content="Logiciel desktop de calcul du coût de revient pour la restauration. Fiches techniques, marges, analytics et menu engineering. Mac et Windows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span>🍽️</span> Fiche Technique Pro
+    </a>
+    <div class="nav-links hide-mobile">
+      <a href="#features" data-t="nav.features">Fonctionnalités</a>
+      <a href="prezzi.html" data-t="nav.pricing">Tarifs</a>
+      <a href="download.html" data-t="nav.download">Télécharger</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/TRIAL_VARIANT_ID" class="btn btn-primary btn-sm" data-t="nav.trial">Essai gratuit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container grid-2">
+    <div class="hero-content fade-up">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-t="hero.badge">Disponible sur Mac et Windows</span>
+      </div>
+      <h1 class="display mb-16">
+        <span data-t="hero.title1">Le coût du plat,</span><br>
+        <em data-t="hero.title2">sous contrôle.</em>
+      </h1>
+      <p class="lead mb-24" data-t="hero.subtitle">Fiches techniques, coûts ingrédients, coefficients et marges.</p>
+      <div class="hero-ctas">
+        <a href="https://app.lemonsqueezy.com/checkout/buy/TRIAL_VARIANT_ID" class="btn btn-primary btn-lg" data-t="hero.cta1">Essai gratuit 30 jours</a>
+        <a href="prezzi.html" class="btn btn-outline btn-lg" data-t="hero.cta2">Voir les tarifs</a>
+      </div>
+      <p class="hero-meta" data-t="hero.meta">Sans carte bancaire. Sans abonnement.</p>
+    </div>
+    <div class="hide-mobile">
+      <div class="app-mockup">
+        <div class="bar"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <div class="title">🍝 Risotto aux Champignons</div>
+        <div class="row"><span class="label">Riz Arborio</span><span class="val">0.600 kg × 3.80 € = <span class="val green">2.28 €</span></span></div>
+        <div class="row"><span class="label">Champignons</span><span class="val">0.400 kg × 8.50 € = <span class="val green">3.40 €</span></span></div>
+        <div class="row"><span class="label">Parmesan</span><span class="val">0.080 kg × 28.00 € = <span class="val green">2.24 €</span></span></div>
+        <div class="row"><span class="label">Beurre</span><span class="val">0.060 kg × 9.50 € = <span class="val green">0.57 €</span></span></div>
+        <div class="row"><span class="label">Bouillon</span><span class="val">0.800 L × 0.90 € = <span class="val green">0.72 €</span></span></div>
+        <div class="coeff">
+          <div class="coeff-val">6.18×</div>
+          <div class="coeff-lbl">coefficient de marge</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOGOS / SOCIAL PROOF ─────────────────────────────────────── -->
+<section class="section-sm bg-paper2">
+  <div class="container text-center">
+    <p style="font-size:0.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:20px">Utilisé par des restaurateurs en</p>
+    <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;color:var(--ink-3);font-size:0.9rem;font-weight:600">
+      <span>🇮🇹 Italie</span>
+      <span>🇫🇷 France</span>
+      <span>🇧🇪 Belgique</span>
+      <span>🇨🇭 Suisse</span>
+      <span>🇱🇺 Luxembourg</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ──────────────────────────────────────────────────── -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="text-center mb-48">
+      <p class="eyebrow mb-8">Fonctionnalités</p>
+      <h2 data-t="features.title">Tout ce dont votre restaurant a besoin</h2>
+      <p class="lead mt-16" style="margin:16px auto 0" data-t="features.sub">Pensé pour la restauration professionnelle</p>
+    </div>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3 data-t="features.f1t">Fiches techniques complètes</h3>
+        <p data-t="features.f1d">Créez des fiches avec ingrédients, quantités, coûts et méthode.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧮</div>
+        <h3 data-t="features.f2t">Calcul des coûts automatique</h3>
+        <p data-t="features.f2d">Coût par portion, marge et coefficient en temps réel.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📥</div>
+        <h3 data-t="features.f3t">Import Excel intelligent</h3>
+        <p data-t="features.f3d">Importez des fiches existantes depuis Excel.</p>
+        <span class="feature-tag tag-pro">Pro</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 data-t="features.f4t">Dashboard Analytics</h3>
+        <p data-t="features.f4d">Identifiez vos plats les plus rentables.</p>
+        <span class="feature-tag tag-pro">Pro</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧮</div>
+        <h3 data-t="features.f5t">Menu Engineering</h3>
+        <p data-t="features.f5d">Stars, Puzzles, Plow Horses et Dogs. Seuils personnalisables.</p>
+        <span class="feature-tag tag-proplus">Pro Plus</span>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 data-t="features.f6t">Fonctionne hors ligne</h3>
+        <p data-t="features.f6d">Application locale. Vos coûts restent confidentiels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ──────────────────────────────────────────────── -->
+<section class="section bg-paper2">
+  <div class="container grid-2">
+    <div>
+      <p class="eyebrow mb-8">Comment ça marche</p>
+      <h2 class="mb-24">Opérationnel en 3 minutes</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3 data-t="download.s1">Téléchargez et décompressez</h3>
+            <p data-t="download.s2">Double-clic sur AVVIA.bat (Windows) ou AVVIA_MAC.command (Mac)</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3 data-t="download.s3">Activez votre licence</h3>
+            <p>L'app s'ouvre dans votre navigateur. Saisissez la clé reçue par email.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3 data-t="download.s4">Créez votre première fiche</h3>
+            <p>Ajoutez vos ingrédients, quantités et prix. Le coefficient s'affiche instantanément.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background:var(--blue);border-radius:16px;padding:32px;color:#94a3b8">
+      <div style="font-family:var(--font-mono);font-size:12px;line-height:2">
+        <div style="color:#4ade80;margin-bottom:8px">✓ Démarrage automatique</div>
+        <div style="color:#fff;font-size:14px;font-weight:700;margin-bottom:16px">📊 Analytics — Juin 2026</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:24px;font-weight:800;color:#fff;font-family:var(--font-body)">4.8×</div>
+            <div style="font-size:10px">Coeff. moyen</div>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:24px;font-weight:800;color:#4ade80;font-family:var(--font-body)">21%</div>
+            <div style="font-size:10px">Ratio moyen</div>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:24px;font-weight:800;color:#fbbf24;font-family:var(--font-body)">38</div>
+            <div style="font-size:10px">Fiches actives</div>
+          </div>
+          <div style="background:rgba(255,255,255,.05);border-radius:8px;padding:12px;text-align:center">
+            <div style="font-size:24px;font-weight:800;color:#a78bfa;font-family:var(--font-body)">12⭐</div>
+            <div style="font-size:10px">Stars menu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ───────────────────────────────────────────────────── -->
+<section class="section" style="background:var(--blue);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Prêt à maîtriser vos coûts ?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px;font-size:1.05rem">Essai gratuit 30 jours. Sans carte bancaire.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://app.lemonsqueezy.com/checkout/buy/TRIAL_VARIANT_ID" class="btn btn-primary btn-lg" data-t="nav.trial">Essai gratuit</a>
+      <a href="prezzi.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.3);color:#fff" data-t="nav.pricing">Voir les tarifs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container" style="max-width:680px">
+    <div class="text-center mb-48">
+      <p class="eyebrow mb-8">FAQ</p>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Fonctionne-t-il sans Internet ?</button>
+      <div class="faq-a"><p>Oui. C'est une application desktop locale. Une fois installée, elle fonctionne entièrement hors ligne. Vos données ne quittent jamais votre PC.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Quelle est la différence entre les plans ?</button>
+      <div class="faq-a"><p>Starter = 1 PC, fonctions de base. Pro = jusqu'à 9 PC + import Excel, PDF avec logo, analytics. Pro Plus = jusqu'à 15 PC + menu engineering avec recommandations et export CSV.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Puis-je utiliser l'app sur plusieurs PC ?</button>
+      <div class="faq-a"><p>Oui, selon votre plan. Starter : 1 PC. Pro : jusqu'à 9 PC (une clé par PC). Pro Plus : jusqu'à 15 PC. Chaque PC utilise sa propre clé d'activation.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Comment fonctionne l'essai gratuit ?</button>
+      <div class="faq-a"><p>L'essai dure 30 jours avec accès à toutes les fonctions. Aucune carte bancaire requise. Après 30 jours, vous pouvez acheter une licence ou arrêter d'utiliser l'app.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Puis-je importer mes fiches Excel existantes ?</button>
+      <div class="faq-a"><p>Oui, avec les plans Pro et Pro Plus. L'importeur reconnaît automatiquement les colonnes, les formules et les différents formats de fiches Excel.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc" data-t="footer.desc">Logiciel professionnel de calcul du coût de revient en restauration.</p>
+      </div>
+      <div>
+        <h4 data-t="footer.product">Produit</h4>
+        <ul>
+          <li><a href="#features" data-t="nav.features">Fonctionnalités</a></li>
+          <li><a href="prezzi.html" data-t="nav.pricing">Tarifs</a></li>
+          <li><a href="download.html" data-t="nav.download">Télécharger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t="footer.support">Support</h4>
+        <ul>
+          <li><a href="contatti.html" data-t="nav.contact">Contact</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. <span data-t="footer.rights">Tous droits réservés.</span></p>
+      <div class="lang-sw">
+        <button data-lang="fr">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
