@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Fiche Technique Pro</title>
+<meta name="description" content="Guides et conseils pour la gestion des coûts en restauration : food cost, coût de revient, menu engineering et comparatifs logiciels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .blog-hero {
+    background: var(--paper2, #f8f4ef);
+    padding: 72px 0 48px;
+    text-align: center;
+  }
+  .blog-hero h1 { margin: 0 0 16px; }
+  .blog-hero .lead { color: var(--ink-2, #6b7280); max-width: 520px; margin: 0 auto; }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+    padding: 56px 0 80px;
+  }
+
+  .blog-card {
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .2s, transform .2s;
+    background: #fff;
+  }
+  .blog-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,.09);
+    transform: translateY(-3px);
+  }
+
+  .card-header {
+    padding: 28px 28px 0;
+  }
+  .card-lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-3, #9ca3af);
+    margin-bottom: 12px;
+  }
+  .card-topic {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-left: 8px;
+  }
+  .topic-coût     { background: #eff6ff; color: #1e40af; }
+  .topic-menu     { background: #fef9c3; color: #854d0e; }
+  .topic-software { background: #f0fdf4; color: #065f46; }
+
+  .blog-card h2 {
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+  .blog-card h2 a {
+    color: var(--ink-0, #111827);
+    text-decoration: none;
+  }
+  .blog-card h2 a:hover { color: #2563eb; }
+
+  .card-desc {
+    font-size: 0.9rem;
+    color: var(--ink-2, #6b7280);
+    line-height: 1.65;
+    padding: 0 28px;
+    flex: 1;
+  }
+
+  .card-footer {
+    padding: 20px 28px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border, #e5e7eb);
+    margin-top: 20px;
+  }
+  .card-read {
+    font-size: 0.8rem;
+    color: var(--ink-3, #9ca3af);
+  }
+  .card-cta {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .card-cta:hover { text-decoration: underline; }
+
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span>🍽️</span> Fiche Technique Pro
+    </a>
+    <div class="nav-links hide-mobile">
+      <a href="index.html#features" data-t="nav.features">Fonctionnalités</a>
+      <a href="prezzi.html" data-t="nav.pricing">Tarifs</a>
+      <a href="download.html" data-t="nav.download">Télécharger</a>
+      <a href="blog.html" style="color:var(--blue,#1a1a2e);font-weight:700">Blog</a>
+      <a href="contatti.html" data-t="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="it">IT</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-sm" data-t="nav.trial">Essai gratuit</a>
+    </div>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="container">
+    <p class="eyebrow mb-8">Blog</p>
+    <h1>Guides restauration</h1>
+    <p class="lead">Conseils pratiques sur la gestion des coûts, le menu engineering et les outils pour restaurateurs indépendants.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="blog-grid">
+
+    <!-- Article 1 — IT -->
+    <article class="blog-card">
+      <div class="card-header">
+        <span class="card-icon">📊</span>
+        <div>
+          <span class="card-lang">🇮🇹 Italiano</span>
+          <span class="card-topic topic-coût">Food Cost</span>
+        </div>
+        <h2><a href="blog-food-cost-it.html">Come calcolare il food cost di un piatto</a></h2>
+      </div>
+      <p class="card-desc">Formula completa, esempi pratici con tabella ingredienti e strategie per mantenere il food cost tra il 25% e il 35%. Include il calcolo del coefficiente moltiplicatore e le 5 errori più comuni.</p>
+      <div class="card-footer">
+        <span class="card-read">8 min di lettura</span>
+        <a href="blog-food-cost-it.html" class="card-cta">Leggi l'articolo →</a>
+      </div>
+    </article>
+
+    <!-- Article 2 — FR -->
+    <article class="blog-card">
+      <div class="card-header">
+        <span class="card-icon">🧮</span>
+        <div>
+          <span class="card-lang">🇫🇷 Français</span>
+          <span class="card-topic topic-coût">Coût de revient</span>
+        </div>
+        <h2><a href="blog-cout-revient-fr.html">Comment calculer le coût de revient d'un plat</a></h2>
+      </div>
+      <p class="card-desc">Formule, coefficient multiplicateur et exemple complet avec une bavette d'aloyau aux échalotes. Coût théorique vs réel, rendement matière et les 5 erreurs classiques à éviter.</p>
+      <div class="card-footer">
+        <span class="card-read">8 min de lecture</span>
+        <a href="blog-cout-revient-fr.html" class="card-cta">Lire l'article →</a>
+      </div>
+    </article>
+
+    <!-- Article 3 — FR -->
+    <article class="blog-card">
+      <div class="card-header">
+        <span class="card-icon">⭐</span>
+        <div>
+          <span class="card-lang">🇫🇷 Français</span>
+          <span class="card-topic topic-menu">Menu Engineering</span>
+        </div>
+        <h2><a href="blog-menu-engineering-fr.html">Menu Engineering : Stars, Puzzles, Plow Horses et Dogs</a></h2>
+      </div>
+      <p class="card-desc">La méthode Kasavana &amp; Smith pour classer chaque plat selon rentabilité et popularité. Matrice complète, exemple chiffré avec 9 plats, et les stratégies à appliquer pour chaque quadrant.</p>
+      <div class="card-footer">
+        <span class="card-read">10 min de lecture</span>
+        <a href="blog-menu-engineering-fr.html" class="card-cta">Lire l'article →</a>
+      </div>
+    </article>
+
+    <!-- Article 4 — EN -->
+    <article class="blog-card">
+      <div class="card-header">
+        <span class="card-icon">🛠️</span>
+        <div>
+          <span class="card-lang">🇬🇧 English</span>
+          <span class="card-topic topic-software">Software</span>
+        </div>
+        <h2><a href="blog-food-cost-software-en.html">Best Food Cost Software for Restaurants 2026</a></h2>
+      </div>
+      <p class="card-desc">Honest comparison of Excel, enterprise SaaS platforms, and dedicated desktop software. Feature matrix, pricing breakdown, and a clear recommendation based on restaurant size and budget.</p>
+      <div class="card-footer">
+        <span class="card-read">9 min read</span>
+        <a href="blog-food-cost-software-en.html" class="card-cta">Read article →</a>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<section class="section" style="background:var(--blue,#1a1a2e);color:#fff">
+  <div class="container text-center">
+    <h2 style="color:#fff;margin-bottom:16px">Prêt à maîtriser vos coûts ?</h2>
+    <p style="color:#94a3b8;margin-bottom:32px">Essai gratuit 30 jours. Sans carte bancaire.</p>
+    <a href="https://app.lemonsqueezy.com/checkout/buy/1778897" class="btn btn-primary btn-lg">Commencer l'essai gratuit</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">🍽️ Fiche Technique Pro</div>
+        <p class="footer-desc">Logiciel professionnel de calcul du coût de revient en restauration.</p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="index.html#features">Fonctionnalités</a></li>
+          <li><a href="prezzi.html">Tarifs</a></li>
+          <li><a href="download.html">Télécharger</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contatti.html">Contact</a></li>
+          <li><a href="mailto:support@fichepro.com">support@fichepro.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fiche Technique Pro. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
