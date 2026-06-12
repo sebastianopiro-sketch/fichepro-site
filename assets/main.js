@@ -59,6 +59,8 @@ const T = {
     pc1:      { it: '1 PC', fr: '1 PC', en: '1 PC' },
     pc9:      { it: 'fino a 9 PC', fr: "jusqu'à 9 PC", en: 'up to 9 PCs' },
     pc15:     { it: 'fino a 15 PC', fr: "jusqu'à 15 PC", en: 'up to 15 PCs' },
+    monthly:  { it: 'al mese', fr: 'par mois', en: 'per month' },
+    cancel:   { it: 'cancella quando vuoi', fr: 'annulez quand vous voulez', en: 'cancel anytime' },
     pc_any:   { it: 'qualsiasi PC', fr: 'n\'importe quel PC', en: 'any PC' },
   },
   download: {
