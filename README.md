@@ -1,7 +1,7 @@
 # Fiche Technique Pro — Sito web
 
 Sito statico HTML/CSS/JS in 3 lingue (IT/FR/EN).
-Live: https://fiche-technique-pro.netlify.app
+Live: https://fichepro-site.sebastianopiro.workers.dev
 
 ## Struttura
 - `index.html` — Landing page
