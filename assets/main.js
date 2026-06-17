@@ -61,6 +61,7 @@ const T = {
     pc15:     { it: '1 PC', fr: '1 PC', en: '1 PC' },
     monthly:  { it: 'al mese', fr: 'par mois', en: 'per month' },
     cancel:   { it: 'cancella quando vuoi', fr: 'annulez quand vous voulez', en: 'cancel anytime' },
+    cancel_sub: { it: 'fatturato mensilmente · cancella quando vuoi', fr: 'facturé mensuellement · annulez quand vous voulez', en: 'billed monthly · cancel anytime' },
     pc_any:   { it: 'qualsiasi PC', fr: 'n\'importe quel PC', en: 'any PC' },
   },
   download: {
