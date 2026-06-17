@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '22'
       - run: npm install -g wrangler
-      - run: wrangler deploy --assets . --compatibility-date 2026-06-17
+      - run: wrangler deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
