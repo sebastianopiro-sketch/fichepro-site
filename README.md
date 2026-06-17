@@ -16,7 +16,7 @@ Live: https://fichepro-site.sebastianopiro.workers.dev
 Push su GitHub → Netlify aggiorna automaticamente.
 
 ## Link Lemon Squeezy
-- Trial (€0):    1778897
-- Starter (€49.99): 1778865
-- Pro (€99):     1778886
-- Pro Plus (€9/mese): 1778891
+- Trial (€0):    1804172
+- Starter (€49.99): 1804204
+- Pro (€99):     1804229
+- Pro Plus (€9/mese): 1804232

@@ -28,10 +28,10 @@ Attributo HTML: data-t="sezione.chiave"
 Regola: aggiungi prima la traduzione in main.js, poi data-t nell'HTML.
 
 ## Link Lemon Squeezy
-Trial    https://app.lemonsqueezy.com/checkout/buy/1778897
-Starter  https://app.lemonsqueezy.com/checkout/buy/1778865
-Pro      https://app.lemonsqueezy.com/checkout/buy/1778886
-Pro Plus https://app.lemonsqueezy.com/checkout/buy/1778891
+Trial    https://app.lemonsqueezy.com/checkout/buy/1804172
+Starter  https://app.lemonsqueezy.com/checkout/buy/1804204
+Pro      https://app.lemonsqueezy.com/checkout/buy/1804229
+Pro Plus https://app.lemonsqueezy.com/checkout/buy/1804232
 
 ## Task pendenti
 - Form Netlify: aggiungere data-netlify="true" e campo hidden form-name in contatti.html
