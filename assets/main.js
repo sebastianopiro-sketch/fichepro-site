@@ -79,6 +79,12 @@ const T = {
     s2: { it: 'Avvia l\'app (doppio click su AVVIA.bat su Windows o AVVIA_MAC.command su Mac)', fr: 'Lancez l\'app (double-clic sur AVVIA.bat ou AVVIA_MAC.command)', en: 'Launch the app (double-click AVVIA.bat on Windows or AVVIA_MAC.command on Mac)' },
     s3: { it: 'L\'app si apre nel browser — inserisci la tua chiave di attivazione', fr: 'L\'app s\'ouvre dans le navigateur — saisissez votre clé d\'activation', en: 'The app opens in your browser — enter your activation key' },
     s4: { it: 'Inizia a creare le tue schede tecniche!', fr: 'Commencez à créer vos fiches techniques !', en: 'Start creating your recipe cards!' },
+    mac_install_title: { it: 'Come installare su Mac', fr: 'Comment installer sur Mac', en: 'How to install on Mac' },
+    mac_install_s1: { it: 'Scarica il file ZIP e decomprimi', fr: 'Téléchargez le fichier ZIP et décompressez-le', en: 'Download the ZIP file and unzip it' },
+    mac_install_s2: { it: 'Trascina FicheTechnique.app nella cartella Applicazioni', fr: 'Glissez FicheTechnique.app dans le dossier Applications', en: 'Drag FicheTechnique.app to your Applications folder' },
+    mac_install_s3: { it: 'Al primo avvio: tasto destro sull\'app → clicca "Apri" → clicca "Apri" nel popup', fr: 'Au premier lancement : clic droit sur l\'app → cliquez "Ouvrir" → cliquez "Ouvrir" dans le popup', en: 'First launch: right-click the app → click "Open" → click "Open" in the popup' },
+    mac_install_s4: { it: 'Solo al primo avvio — poi si apre normalmente', fr: 'Seulement au premier lancement — ensuite elle s\'ouvre normalement', en: 'Only on first launch — afterwards it opens normally' },
+    mac_install_note: { it: 'Questo avviso appare perché l\'app non è distribuita tramite il Mac App Store. È normale per software indipendente.', fr: 'Cet avertissement apparaît car l\'app n\'est pas distribuée via le Mac App Store. C\'est normal pour les logiciels indépendants.', en: 'This warning appears because the app is not distributed via the Mac App Store. This is normal for independent software.' },
   },
   contact: {
     title:    { it: 'Contattaci', fr: 'Nous contacter', en: 'Contact us' },
