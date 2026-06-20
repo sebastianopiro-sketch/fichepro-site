@@ -3,7 +3,7 @@
 ## Contesto
 Sito marketing statico — HTML/CSS/JS puro, nessun framework.
 Deploy su Netlify — push git → aggiornamento automatico.
-Live: https://fiche-technique-pro.fichepro.workers.dev
+Live: https://fiche-pro.com
 
 ## Regole operative
 - Rispondi e commenta sempre in italiano
