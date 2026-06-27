@@ -5,6 +5,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      WRANGLER_LOG: debug
     steps:
       - uses: actions/checkout@v4
       - uses: cloudflare/wrangler-action@v3
