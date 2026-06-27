@@ -15,3 +15,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: '4'
           command: deploy --assets . --compatibility-date 2026-06-17 --name fiche-technique-pro
+      - name: Show Wrangler logs
+        if: always()
+        run: cat /home/runner/.config/.wrangler/logs/*.log 2>/dev/null || echo "no logs"
