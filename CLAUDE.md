@@ -34,5 +34,5 @@ Pro      https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-
 Pro Plus https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-e205266a695a
 
 ## Task pendenti
-- Form Netlify: aggiungere data-netlify="true" e campo hidden form-name in contatti.html
+- Form contatti: migrato a Web3Forms (support@fiche-pro.com) — completato
 - Link download: sostituire href="#" con ZIP reali in download.html
