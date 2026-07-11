@@ -1,5 +1,10 @@
 .git
+.git/**
 .github
+.github/**
 .DS_Store
 *.md
+*.toml
+*.txt
 node_modules
+node_modules/**
