@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tarifs — Fiche Technique Pro</title>
-<meta name="description" content="Prix de Fiche Technique Pro. Paiement unique, sans abonnement. Starter €49.99, Pro €99, Pro Plus €15/mese.">
+<meta name="description" content="Tarifs de Fiche Technique Pro. Starter 19€/mois, Pro 34€/mois, Pro Plus 49€/mois. Mensuel ou annuel, annulez quand vous voulez.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -34,39 +34,31 @@
   <div class="container">
     <div class="text-center mb-48">
       <p class="eyebrow mb-8">Tarifs</p>
-      <h2 data-t="pricing.title">Prix unique, pour toujours</h2>
-      <p class="lead mt-16" style="margin:16px auto 0" data-t="pricing.sub">Sans abonnement. Payez une fois, utilisez pour toujours.</p>
+      <h2 data-t="pricing.title">La formule qui vous convient</h2>
+      <p class="lead mt-16" style="margin:16px auto 0" data-t="pricing.sub">Mensuel ou annuel, annulez quand vous voulez.</p>
+
+      <div style="margin-top:32px">
+        <div class="billing-toggle" id="billing-toggle">
+          <button class="toggle-opt active" data-billing="monthly" data-t="pricing.toggle_monthly">Mensuel</button>
+          <button class="toggle-opt" data-billing="annual" data-t="pricing.toggle_annual">Annuel</button>
+        </div>
+      </div>
     </div>
 
-    <div class="pricing-grid">
-
-      <!-- Trial -->
-      <div class="plan-card">
-        <div class="plan-name">Trial</div>
-        <div class="plan-pc" data-t="pricing.pc_any">n'importe quel PC</div>
-        <div class="plan-price">€<span>0</span></div>
-        <div class="plan-once">30 jours</div>
-        <ul class="plan-features">
-          <li data-t="pricing.f_sheets">Fiches techniques illimitées</li>
-          <li data-t="pricing.f_cost">Calcul des coûts auto</li>
-          <li data-t="pricing.f_excel">Export Excel et impression</li>
-          <li data-t="pricing.f_history">Historique des modifications</li>
-          <li data-t="pricing.f_lang3">IT + FR + EN</li>
-          <li class="no" data-t="pricing.f_import">Import Excel intelligent</li>
-          <li class="no" data-t="pricing.f_pdf">PDF avec logo</li>
-          <li class="no" data-t="pricing.f_analytics">Dashboard analytics</li>
-          <li class="no" data-t="pricing.f_menu">Menu Engineering</li>
-        </ul>
-        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-e205266a695a" target="_blank" class="btn btn-outline plan-cta" data-t="pricing.trial_cta">Démarrer l'essai gratuit</a>
-        <p class="plan-trial" data-t="pricing.trial_sub">30 jours, sans carte</p>
-      </div>
+    <div class="pricing-grid pricing-grid-3">
 
       <!-- Starter -->
-      <div class="plan-card">
+      <div class="plan-card"
+           data-monthly-amount="19" data-annual-amount="19"
+           data-monthly-period="pricing.per_month" data-annual-period="pricing.per_month"
+           data-monthly-note="pricing.billed_monthly" data-annual-note="pricing.annual_note_starter"
+           data-monthly-href="https://fichepro.lemonsqueezy.com/checkout/buy/27d84fe8-a721-4baa-b73f-af09e9754cd2?enabled=1804239"
+           data-annual-href="https://fichepro.lemonsqueezy.com/checkout/buy/86189e6c-3eff-4fa1-8cea-d5f1268fbfcc?enabled=1897561">
         <div class="plan-name">Starter</div>
-        <div class="plan-pc" data-t="pricing.pc1">1 PC</div>
-        <div class="plan-price"><sup>€</sup>49<span class="cents">.99</span></div>
-        <div class="plan-once" data-t="pricing.once">paiement unique</div>
+        <div class="plan-price">
+          <sup>€</sup><span class="plan-amount">19</span><span class="plan-period">/mois</span>
+        </div>
+        <div class="plan-billing-note">facturé mensuellement</div>
         <ul class="plan-features">
           <li data-t="pricing.f_sheets">Fiches techniques illimitées</li>
           <li data-t="pricing.f_cost">Calcul des coûts auto</li>
@@ -79,16 +71,23 @@
           <li class="no" data-t="pricing.f_analytics">Dashboard analytics</li>
           <li class="no" data-t="pricing.f_menu">Menu Engineering</li>
         </ul>
-        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-e205266a695a" target="_blank" class="btn btn-dark plan-cta" data-t="pricing.buy">Acheter maintenant</a>
+        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/27d84fe8-a721-4baa-b73f-af09e9754cd2?enabled=1804239"
+           target="_blank" class="btn btn-dark plan-cta" data-t="pricing.buy">Acheter maintenant</a>
       </div>
 
       <!-- Pro -->
-      <div class="plan-card featured">
-        <div class="plan-badge" data-t="pricing.popular">Plus populaire</div>
+      <div class="plan-card featured"
+           data-monthly-amount="34" data-annual-amount="329"
+           data-monthly-period="pricing.per_month" data-annual-period="pricing.per_year"
+           data-monthly-note="pricing.billed_monthly" data-annual-note="pricing.annual_note_pro"
+           data-monthly-href="https://fichepro.lemonsqueezy.com/checkout/buy/9ca70185-df8d-4b7f-bc41-84fb2249e5ea?enabled=1897565"
+           data-annual-href="https://fichepro.lemonsqueezy.com/checkout/buy/b2d0595e-7793-4c36-9eb0-e86977b51066?enabled=1897575">
+        <div class="plan-badge" data-t="pricing.chosen">Le plus choisi</div>
         <div class="plan-name">Pro</div>
-        <div class="plan-pc" data-t="pricing.pc9">1 PC</div>
-        <div class="plan-price"><sup>€</sup>99</div>
-        <div class="plan-once" data-t="pricing.once">paiement unique</div>
+        <div class="plan-price">
+          <sup>€</sup><span class="plan-amount">34</span><span class="plan-period">/mois</span>
+        </div>
+        <div class="plan-billing-note">facturé mensuellement</div>
         <ul class="plan-features">
           <li data-t="pricing.f_sheets">Fiches techniques illimitées</li>
           <li data-t="pricing.f_cost">Calcul des coûts auto</li>
@@ -104,16 +103,22 @@
           <li class="no" data-t="pricing.f_actions">Actions suggérées</li>
           <li class="no" data-t="pricing.f_csv">Export CSV analytics</li>
         </ul>
-        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-e205266a695a" target="_blank" class="btn btn-primary plan-cta" data-t="pricing.buy">Acheter maintenant</a>
+        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/9ca70185-df8d-4b7f-bc41-84fb2249e5ea?enabled=1897565"
+           target="_blank" class="btn btn-primary plan-cta" data-t="pricing.buy">Acheter maintenant</a>
       </div>
 
       <!-- Pro Plus -->
-      <div class="plan-card">
+      <div class="plan-card"
+           data-monthly-amount="49" data-annual-amount="469"
+           data-monthly-period="pricing.per_month" data-annual-period="pricing.per_year"
+           data-monthly-note="pricing.billed_monthly" data-annual-note="pricing.annual_note_proplus"
+           data-monthly-href="https://fichepro.lemonsqueezy.com/checkout/buy/0972574b-1833-4d31-a07d-136267696e24?enabled=1897581"
+           data-annual-href="https://fichepro.lemonsqueezy.com/checkout/buy/1611473c-1813-4e4b-9a20-3f5c9eeb3f18?enabled=1897589">
         <div class="plan-name">Pro Plus</div>
-        <div class="plan-pc" data-t="pricing.pc15">1 PC</div>
-        <div class="plan-price"><sup>€</sup>15</div>
-        <div class="plan-once" data-t="pricing.monthly">al mese</div>
-        <div style="font-size:11px;color:var(--ink-3);margin-bottom:20px" data-t="pricing.cancel_sub">fatturato mensilmente · cancella quando vuoi</div>
+        <div class="plan-price">
+          <sup>€</sup><span class="plan-amount">49</span><span class="plan-period">/mois</span>
+        </div>
+        <div class="plan-billing-note">facturé mensuellement</div>
         <ul class="plan-features">
           <li data-t="pricing.f_sheets">Fiches techniques illimitées</li>
           <li data-t="pricing.f_cost">Calcul des coûts auto</li>
@@ -129,7 +134,8 @@
           <li data-t="pricing.f_actions">Actions suggérées</li>
           <li data-t="pricing.f_csv">Export CSV analytics</li>
         </ul>
-        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-e205266a695a" target="_blank" class="btn btn-dark plan-cta" data-t="pricing.buy">Acheter maintenant</a>
+        <a href="https://fichepro.lemonsqueezy.com/checkout/buy/0972574b-1833-4d31-a07d-136267696e24?enabled=1897581"
+           target="_blank" class="btn btn-dark plan-cta" data-t="pricing.buy">Acheter maintenant</a>
       </div>
 
     </div>
@@ -138,8 +144,14 @@
     <div style="text-align:center;margin-top:48px;padding:32px;background:var(--paper-2);border-radius:16px">
       <div style="font-size:36px;margin-bottom:12px">🔒</div>
       <h3 style="margin-bottom:8px">Paiement sécurisé via Lemon Squeezy</h3>
-      <p style="color:var(--ink-2);font-size:0.9rem;max-width:480px;margin:0 auto">TVA européenne gérée automatiquement. Clé de licence envoyée par email immédiatement après le paiement.</p>
+      <p style="color:var(--ink-2);font-size:0.9rem;max-width:480px;margin:0 auto">TVA européenne gérée automatiquement. Accès immédiat après le paiement.</p>
     </div>
+
+    <!-- Licenza a vita -->
+    <p class="text-center" style="margin-top:24px;font-size:0.85rem;color:var(--ink-3)">
+      <span data-t="pricing.lifetime_note">Vous préférez un paiement unique sans abonnement ?</span>
+      <a href="contatti.html" style="color:var(--ink-2);text-decoration:underline" data-t="pricing.lifetime_contact">Contactez-nous</a>
+    </p>
   </div>
 </section>
 

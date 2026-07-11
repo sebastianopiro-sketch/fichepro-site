@@ -1,6 +1,7 @@
 // ── Language system ───────────────────────────────────────────────
 const LANG_KEY = 'ftp_lang';
 let currentLang = localStorage.getItem(LANG_KEY) || 'fr';
+let currentBilling = 'monthly';
 
 const T = {
   nav: {
@@ -36,8 +37,19 @@ const T = {
     f6d:  { it: 'App desktop locale, nessun dato inviato al cloud. I tuoi costi rimangono riservati.', fr: 'Application desktop locale, aucune donnée envoyée dans le cloud. Vos coûts restent confidentiels.', en: 'Local desktop app, no data sent to the cloud. Your costs stay private.' },
   },
   pricing: {
-    title:    { it: 'Prezzo unico, per sempre', fr: 'Prix unique, pour toujours', en: 'One price, forever' },
-    sub:      { it: 'Nessun abbonamento. Paghi una volta, usi per sempre.', fr: 'Sans abonnement. Payez une fois, utilisez pour toujours.', en: 'No subscription. Pay once, use forever.' },
+    title:    { it: 'Il piano giusto per te', fr: 'La formule qui vous convient', en: 'The right plan for you' },
+    sub:      { it: 'Mensile o annuale, cancella quando vuoi.', fr: 'Mensuel ou annuel, annulez quand vous voulez.', en: 'Monthly or annual, cancel anytime.' },
+    toggle_monthly: { it: 'Mensile', fr: 'Mensuel', en: 'Monthly' },
+    toggle_annual:  { it: 'Annuale', fr: 'Annuel', en: 'Annual' },
+    per_month: { it: '/mese', fr: '/mois', en: '/mo' },
+    per_year:  { it: '/anno', fr: '/an', en: '/yr' },
+    billed_monthly: { it: 'fatturato mensilmente', fr: 'facturé mensuellement', en: 'billed monthly' },
+    annual_note_starter: { it: '228€/anno', fr: '228€/an', en: '228€/yr' },
+    annual_note_pro:     { it: 'ovvero 329€/anno, -20%', fr: 'soit 329€/an, -20%', en: 'i.e. 329€/yr, -20%' },
+    annual_note_proplus: { it: 'ovvero 469€/anno, -20%', fr: 'soit 469€/an, -20%', en: 'i.e. 469€/yr, -20%' },
+    chosen:   { it: 'Più scelto', fr: 'Le plus choisi', en: 'Most chosen' },
+    lifetime_note:    { it: 'Preferisci un pagamento unico senza abbonamento? ', fr: 'Vous préférez un paiement unique sans abonnement ? ', en: 'Prefer a one-time payment with no subscription? ' },
+    lifetime_contact: { it: 'Contattaci', fr: 'Contactez-nous', en: 'Contact us' },
     once:     { it: 'pagamento unico', fr: 'paiement unique', en: 'one-time payment' },
     buy:      { it: 'Acquista ora', fr: 'Acheter maintenant', en: 'Buy now' },
     trial_cta:{ it: 'Inizia il trial gratuito', fr: 'Démarrer l\'essai gratuit', en: 'Start free trial' },
@@ -138,6 +150,35 @@ function renderAll() {
     const [section, key] = el.dataset.tPlaceholder.split('.');
     el.placeholder = t(section, key);
   });
+  updateBilling(currentBilling);
+}
+
+function updateBilling(billing) {
+  currentBilling = billing;
+  document.querySelectorAll('.plan-card[data-monthly-href]').forEach(card => {
+    const amount = card.dataset[billing + 'Amount'];
+    const periodKey = card.dataset[billing + 'Period'];
+    const noteKey = card.dataset[billing + 'Note'];
+    const href = card.dataset[billing + 'Href'];
+    if (!amount) return;
+    card.querySelector('.plan-amount').textContent = amount;
+    const [ps, pk] = periodKey.split('.');
+    card.querySelector('.plan-period').textContent = t(ps, pk);
+    const [ns, nk] = noteKey.split('.');
+    card.querySelector('.plan-billing-note').textContent = t(ns, nk);
+    card.querySelector('.plan-cta').href = href;
+  });
+}
+
+function initBillingToggle() {
+  const toggle = document.getElementById('billing-toggle');
+  if (!toggle) return;
+  toggle.querySelectorAll('.toggle-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggle.querySelectorAll('.toggle-opt').forEach(b => b.classList.toggle('active', b === btn));
+      updateBilling(btn.dataset.billing);
+    });
+  });
 }
 
 // ── FAQ toggle ────────────────────────────────────────────────────
@@ -200,4 +241,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq();
   initNav();
   initForm();
+  initBillingToggle();
 });

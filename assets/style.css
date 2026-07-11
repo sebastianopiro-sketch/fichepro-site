@@ -159,9 +159,33 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 .tag-pro { background: #dbeafe; color: #1e40af; }
 .tag-proplus { background: #ede9fe; color: #4c1d95; }
 
+/* ── Billing Toggle ──────────────────────────────────────────────── */
+.billing-toggle {
+  display: inline-flex;
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 4px;
+}
+.billing-toggle .toggle-opt {
+  padding: 8px 24px;
+  border-radius: 36px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--ink-3);
+  transition: all .2s;
+  font-family: var(--font-body);
+}
+.billing-toggle .toggle-opt.active { background: var(--ink); color: #fff; }
+
 /* ── Pricing ─────────────────────────────────────────────────────── */
 .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start; }
+.pricing-grid-3 { grid-template-columns: repeat(3, 1fr); max-width: 860px; margin-left: auto; margin-right: auto; }
 @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .pricing-grid-3 { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .pricing-grid { grid-template-columns: 1fr; } }
 .plan-card {
   background: #fff;
@@ -185,6 +209,7 @@ h3 { font-size: 1.1rem; font-weight: 700; }
 .plan-price sup { font-size: 1rem; vertical-align: top; margin-top: 6px; margin-right: 2px; }
 .plan-price .cents { font-size: 1.4rem; }
 .plan-once { font-size: 0.75rem; color: var(--ink-3); margin-top: 4px; margin-bottom: 20px; }
+.plan-billing-note { font-size: 0.75rem; color: var(--ink-3); margin-top: 4px; margin-bottom: 20px; }
 .plan-features { list-style: none; margin-bottom: 24px; }
 .plan-features li { font-size: 0.85rem; color: var(--ink-2); padding: 5px 0; display: flex; gap: 8px; align-items: flex-start; }
 .plan-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
