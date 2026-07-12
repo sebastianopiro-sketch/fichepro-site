@@ -17,8 +17,4 @@ jobs:
           preCommands: |
             mkdir -p /tmp/deploy
             rsync -a --exclude='.git/' --exclude='node_modules/' --exclude='.github/' --exclude='*.md' --exclude='*.toml' --exclude='*.txt' . /tmp/deploy/
-            echo "=== /tmp/deploy contents ==="
-            ls -la /tmp/deploy/
-            echo "=== .git present? ==="
-            ls /tmp/deploy/.git 2>/dev/null && echo "YES .git found" || echo "NO .git — correctly excluded"
           command: deploy --assets /tmp/deploy
