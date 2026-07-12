@@ -16,12 +16,5 @@ jobs:
           wranglerVersion: '4'
           preCommands: |
             mkdir -p /tmp/deploy
-            rsync -a \
-              --exclude='node_modules' \
-              --exclude='.git' \
-              --exclude='.github' \
-              --exclude='*.md' \
-              --exclude='*.toml' \
-              --exclude='*.txt' \
-              . /tmp/deploy/
+            rsync -a --exclude='node_modules' --exclude='.git' --exclude='.github' --exclude='*.md' --exclude='*.toml' --exclude='*.txt' . /tmp/deploy/
           command: deploy --assets /tmp/deploy
