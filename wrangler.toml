@@ -2,7 +2,6 @@ name = "fiche-technique-pro"
 compatibility_date = "2026-06-17"
 
 [assets]
-directory = "."
 html_handling = "auto-trailing-slash"
 not_found_handling = "single-page-application"
 exclude = ["node_modules", ".git", ".github", ".DS_Store", "*.md", "*.toml", "*.txt"]
