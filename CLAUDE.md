@@ -36,3 +36,12 @@ Pro Plus https://fichepro.lemonsqueezy.com/checkout/buy/998afe07-c0dc-4f1d-b0e0-
 ## Task pendenti
 - Form contatti: migrato a Web3Forms (support@fiche-pro.com) — completato
 - Link download: sostituire href="#" con ZIP reali in download.html
+
+## Note sessione 12-13 luglio 2026
+
+- **Nuova struttura tariffe**: Starter 19€/mese · Pro 34€/mese · Pro Plus 49€/mese. Sconto -20% annuale su Pro e Pro Plus. Link checkout in prezzi.html aggiornati con i 6 variant ID reali (abbonamenti mensili/annuali).
+- **Email di supporto ufficiale**: `support@fiche-pro.com` (CON trattino) — verificato via MX record reali su Cloudflare (Email Routing attivo, inoltra a sebastianopiro@gmail.com). `support@fichepro.com` (senza trattino) NON esiste come dominio, non usarlo mai. Uniformato su tutti i 14 file del sito.
+- **Sicurezza — deploy Workers**: risolta esposizione pubblica di `.git` su fiche-pro.com. Causa: `directory = "."` in wrangler.toml in conflitto con `--assets` nel deploy. Fix definitivo in `.github/workflows/deploy.yml`: rsync con `--exclude='.git/'` (trailing slash obbligatorio) copia i soli asset statici in `/tmp/deploy` prima che wrangler giri. `directory` rimossa da wrangler.toml.
+- **Deploy**: sito ora su Cloudflare Workers (non più Netlify). wrangler.toml: `html_handling = auto-trailing-slash`, `not_found_handling = single-page-application`. CI attivo su push a main via `cloudflare/wrangler-action@v3`.
+- **REGOLA PERMANENTE — allineamento branch**: dopo ogni hotfix diretto su main, cherry-pick subito anche su develop e staging, nello stesso momento. Prima di QUALSIASI promozione develop/staging → main, verificare la DIREZIONE del diff con `git diff main <branch> --stat`. Un branch con "commit in più" non è detto sia più avanzato. Se main ha contenuto assente su develop/staging, riallineare con `git reset --hard main`, non promuovere.
+- **Task aperti**: link download in download.html ancora placeholder `#` (in attesa binari Mac e Windows definitivi).
