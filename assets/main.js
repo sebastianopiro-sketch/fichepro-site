@@ -122,6 +122,49 @@ const T = {
     support:  { it: 'Supporto', fr: 'Support', en: 'Support' },
     rights:   { it: 'Tutti i diritti riservati.', fr: 'Tous droits réservés.', en: 'All rights reserved.' },
   },
+  home: {
+    mockup_dish:   { it: '🍝 Risotto ai Funghi',      fr: '🍝 Risotto aux Champignons', en: '🍝 Mushroom Risotto' },
+    mockup_coeff:  { it: 'coefficiente di margine',    fr: 'coefficient de marge',        en: 'margin coefficient' },
+
+    used_by:       { it: 'Usato da ristoratori in',    fr: 'Utilisé par des restaurateurs en', en: 'Used by restaurateurs in' },
+    country_it:    { it: '🇮🇹 Italia',                 fr: '🇮🇹 Italie',                  en: '🇮🇹 Italy' },
+    country_fr:    { it: '🇫🇷 Francia',                fr: '🇫🇷 France',                  en: '🇫🇷 France' },
+    country_be:    { it: '🇧🇪 Belgio',                 fr: '🇧🇪 Belgique',                en: '🇧🇪 Belgium' },
+    country_ch:    { it: '🇨🇭 Svizzera',               fr: '🇨🇭 Suisse',                  en: '🇨🇭 Switzerland' },
+    country_lu:    { it: '🇱🇺 Lussemburgo',            fr: '🇱🇺 Luxembourg',              en: '🇱🇺 Luxembourg' },
+
+    hiw_eyebrow:   { it: 'Come funziona',              fr: 'Comment ça marche',           en: 'How it works' },
+    hiw_title:     { it: 'Operativo in 3 minuti',      fr: 'Opérationnel en 3 minutes',   en: 'Up and running in 3 minutes' },
+    hiw_s1t:       { it: 'Scarica e installa',         fr: 'Téléchargez et installez',    en: 'Download and install' },
+    hiw_s1d:       { it: 'Scarica il file per Mac (.zip) o Windows (.exe) dalla pagina Download.', fr: 'Téléchargez le fichier Mac (.zip) ou Windows (.exe) depuis la page Téléchargement.', en: 'Download the Mac (.zip) or Windows (.exe) file from the Download page.' },
+    hiw_s2t:       { it: 'Attiva la licenza',          fr: 'Activez votre licence',       en: 'Activate your licence' },
+    hiw_s2d:       { it: "Apri l'app e inserisci la chiave di attivazione ricevuta per email.", fr: "Ouvrez l'app et saisissez la clé d'activation reçue par email.", en: 'Open the app and enter the activation key received by email.' },
+    hiw_s3t:       { it: 'Crea la tua prima scheda',   fr: 'Créez votre première fiche',  en: 'Create your first recipe card' },
+    hiw_s3d:       { it: 'Aggiungi ingredienti, quantità e prezzi. Il coefficiente appare in tempo reale.', fr: 'Ajoutez ingrédients, quantités et prix. Le coefficient s\'affiche instantanément.', en: 'Add ingredients, quantities and prices. The mark-up appears in real time.' },
+
+    analytics_start: { it: '✓ Avvio automatico',       fr: '✓ Démarrage automatique',     en: '✓ Auto start' },
+    analytics_title: { it: '📊 Analytics — Giugno 2026', fr: '📊 Analytics — Juin 2026',  en: '📊 Analytics — June 2026' },
+    analytics_coeff: { it: 'Coeff. medio',             fr: 'Coeff. moyen',                en: 'Avg mark-up' },
+    analytics_ratio: { it: 'Ratio medio',              fr: 'Ratio moyen',                 en: 'Avg ratio' },
+    analytics_cards: { it: 'Schede attive',            fr: 'Fiches actives',              en: 'Active cards' },
+    analytics_stars: { it: 'Stars menu',               fr: 'Stars menu',                  en: 'Menu stars' },
+
+    cta_title:     { it: 'Pronto a controllare i tuoi costi?', fr: 'Prêt à maîtriser vos coûts ?', en: 'Ready to master your costs?' },
+    cta_sub:       { it: 'Prova gratis 30 giorni. Nessuna carta di credito.', fr: 'Essai gratuit 30 jours. Sans carte bancaire.', en: 'Free 30-day trial. No credit card.' },
+
+    faq_eyebrow:   { it: 'FAQ',                        fr: 'FAQ',                         en: 'FAQ' },
+    faq_title:     { it: 'Domande frequenti',          fr: 'Questions fréquentes',        en: 'Frequently asked questions' },
+    faq_q1:        { it: 'Funziona senza Internet?',   fr: 'Fonctionne-t-il sans Internet ?', en: 'Does it work without Internet?' },
+    faq_a1:        { it: "Sì. È un'app desktop locale. Una volta installata funziona completamente offline. I tuoi dati non lasciano mai il tuo PC.", fr: "Oui. C'est une application desktop locale. Une fois installée, elle fonctionne entièrement hors ligne. Vos données ne quittent jamais votre PC.", en: "Yes. It's a local desktop app. Once installed it works fully offline. Your data never leaves your PC." },
+    faq_q2:        { it: 'Qual è la differenza tra i piani?', fr: 'Quelle est la différence entre les plans ?', en: 'What is the difference between plans?' },
+    faq_a2:        { it: 'Starter = 1 PC, funzioni base. Pro = 1 PC + import Excel, PDF con logo, analytics. Pro Plus = 1 PC + menu engineering con raccomandazioni ed export CSV.', fr: 'Starter = 1 PC, fonctions de base. Pro = 1 PC + import Excel, PDF avec logo, analytics. Pro Plus = 1 PC + menu engineering avec recommandations et export CSV.', en: 'Starter = 1 PC, core features. Pro = 1 PC + Excel import, branded PDF, analytics. Pro Plus = 1 PC + menu engineering with recommendations and CSV export.' },
+    faq_q3:        { it: 'Posso usare l\'app su più PC?', fr: 'Puis-je utiliser l\'app sur plusieurs PC ?', en: 'Can I use the app on multiple PCs?' },
+    faq_a3:        { it: 'Ogni licenza attiva 1 PC. Per cambiare dispositivo è necessario disattivare prima quello corrente dalle Impostazioni.', fr: 'Chaque licence active 1 PC. Pour changer d\'appareil, désactivez d\'abord le PC actuel depuis les Paramètres.', en: 'Each licence activates 1 PC. To switch device, deactivate the current one first from Settings.' },
+    faq_q4:        { it: 'Come funziona la prova gratuita?', fr: 'Comment fonctionne l\'essai gratuit ?', en: 'How does the free trial work?' },
+    faq_a4:        { it: 'La prova dura 30 giorni con accesso a tutte le funzioni. Nessuna carta di credito richiesta. Dopo 30 giorni puoi acquistare una licenza o smettere di usare l\'app.', fr: "L'essai dure 30 jours avec accès à toutes les fonctions. Aucune carte bancaire requise. Après 30 jours, vous pouvez acheter une licence ou arrêter d'utiliser l'app.", en: 'The trial lasts 30 days with full access. No credit card required. After 30 days you can purchase a licence or stop using the app.' },
+    faq_q5:        { it: 'Posso importare le mie schede Excel esistenti?', fr: 'Puis-je importer mes fiches Excel existantes ?', en: 'Can I import my existing Excel sheets?' },
+    faq_a5:        { it: 'Sì, con i piani Pro e Pro Plus. L\'importatore riconosce automaticamente colonne, formule e diversi formati di schede Excel.', fr: 'Oui, avec les plans Pro et Pro Plus. L\'importeur reconnaît automatiquement les colonnes, les formules et les différents formats de fiches Excel.', en: 'Yes, with Pro and Pro Plus plans. The importer automatically recognises columns, formulas and different Excel sheet formats.' },
+  },
 };
 
 function t(section, key) {
